@@ -216,6 +216,6 @@ schedule.scheduleJob('0 4 * * *', () => {
 
 
 //cach Exception and write them to the logfile
-process.on('uncaughtException', function(err) {
+proc.on('uncaughtException', function(err) {
 	console.error((err && err.stack) ? err.stack : err);
   });
