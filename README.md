@@ -28,9 +28,9 @@ Command | Cescription | Usage
 
 List of requirements
 -------------
-
-    [tmi.js](https://github.com/tmijs/tmi.js)
-    [node-schedule](https://github.com/node-schedule/node-schedule)
-    fs
-    process
+* [tmi.js](https://github.com/tmijs/tmi.js)
+* [node-schedule](https://github.com/node-schedule/node-schedule)
+* fs
+* process
+* nodejs
     
