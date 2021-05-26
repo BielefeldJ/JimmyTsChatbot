@@ -26,6 +26,16 @@ Command | Cescription | Usage
 `!so` | give a shoutout to someone in chat | `!so @UserName`
 `!setcounter` | sets the counter for wrong buttons pressed to a value | `!setcounter 10`
 
+How to run
+-------------
+* rename example_config.js -> config.js
+* change the config file
+* run the bot
+
+```
+node bot.js &
+```
+
 List of requirements
 -------------
 * [tmi.js](https://github.com/tmijs/tmi.js)
