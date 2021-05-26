@@ -103,8 +103,5 @@ dist
 # TernJS port file
 .tern-port
 
-#ignore logfines
-*.log
-
 #ignore real config file
 config.js
