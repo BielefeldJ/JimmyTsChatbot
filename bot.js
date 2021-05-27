@@ -108,6 +108,11 @@ function onMessageHandler (target, user, msg, self) {
 			client.say(target,`Counter set to ${wrongbuttoncounter.getCounter}.`);
 			return;
 		}
+		else if(commandName === 'welcome')
+		{
+			client.say(target, `Welcome to Jimmys stream!! Remember to follow and subscribe. ❤️💞`);
+			return;
+		}
 	}
 
 	// User commands
@@ -177,10 +182,7 @@ function onCheerHandler(target, user, message)
 //called every time someone hosts jimmys channel
 function onHostedHandler(target, username, viewers, autohost)
 {
-	if(autohost === false){
-		client.say(target,`${username} is hosting with ${viewers} viewers! Thank you!`);
-	}
-		
+	client.say(target,`${username} is hosting with ${viewers} viewers! Thank you!`);		
 }
 
 //Called every time someone subs to Jimmys channel
@@ -214,7 +216,6 @@ schedule.scheduleJob('0 4 * * *', () => {
 	console.log('Triggered at 4 am. Reset all counter to 0');
 
 });
-
 
 //cach Exception and write them to the logfile
 proc.on('uncaughtException', function(err) {

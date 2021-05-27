@@ -18,13 +18,14 @@ Command | Cescription | Usage
 `!counter++` | increse the counter. Use only when he pressed a wrong button | `!counter++`
 `!quote` | shows one of many famous quotes from Jimmy | `!quote`
 `!lastsong` | Yes this really is the last song! | `!lastsong`
-`!love` | shows a lot of love in chat| `!love`
+`!love` | shows a lot of love in chat | `!love`
 
 ### Mods ###
 Command | Cescription | Usage
 ----------------|--------------|-------
 `!so` | give a shoutout to someone in chat | `!so @UserName`
 `!setcounter` | sets the counter for wrong buttons pressed to a value | `!setcounter 10`
+`!welcome` | welcomes everyone to this channel | `!welcome`
 
 How to run
 -------------
