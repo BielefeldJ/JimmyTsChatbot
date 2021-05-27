@@ -229,6 +229,7 @@ function onRandomSubgiftHandler(target, username, numbOfSubs, methods, user)
 schedule.scheduleJob('0 4 * * *', () => { 
 	lastsongcounter.resetCounter();
 	wrongbuttoncounter.resetCounter();
+	favsongcounter.resetCounter();
 	console.log('Triggered at 4 am. Reset all counter to 0');
 });
 
