@@ -26,6 +26,10 @@ function getSenderGiftCount(user)
 
 function getUserVIP(user)
 {
+	if(user["badges"] == null)
+	{
+		return false;
+	}
 	return ("vip" in user["badges"]);
 }
 
