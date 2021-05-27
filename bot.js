@@ -14,11 +14,11 @@ const lastsongcounter = new Counter();
 
 //use logfiles
 var access = fs.createWriteStream('access.log')
-      , error = fs.createWriteStream('error.log');
+	  , error = fs.createWriteStream('error.log');
 
 // redirect stdout / stderr
-proc.stdout.write = access.write.bind(access);
-proc.stderr.write = error.write.bind(error); 
+//proc.stdout.write = access.write.bind(access);
+//proc.stderr.write = error.write.bind(error); 
 
 
 // Valid commands start with !
@@ -63,6 +63,7 @@ function onMessageHandler (target, user, msg, self) {
 	let isMod = user.mod || user['user-type'] === 'mod';
 	let isBroadcaster = target.slice(1) === user.username; //check if user broadcaster by comparing current channel with the username of the sender
 	let isModUp = isMod || isBroadcaster;
+	let isVIP = util.getUserVIP(user);
 	let isBotOwner = user.username === "profdrbielefeld";
 
 	//used to check if the user send parameter
@@ -94,11 +95,11 @@ function onMessageHandler (target, user, msg, self) {
 	}
 
 	//Mod commands
-	if(isModUp)
+	if(isModUp || isVIP)
 	{
 		if(commandName === 'so' && hasParameter) //shoutout someone
 		{
-			client.say(target,`Big shoutout to ${parse[1]}!!! Much love <3`);
+			client.say(target,`Big shoutout to '${parse[1]}' please follow and subscribe ✨✨ www.twitch.tv/${parse[1].substring(1)}`);		
 			return;
 		}
 		else if(commandName === 'setcounter' && hasParameter) //set the wrong button counter to a value given as parameter
