@@ -145,6 +145,16 @@ function onMessageHandler (target, user, msg, self) {
 			return;
 		}
 	}
+	else if(commandName === 'tea')
+	{
+		if(hasParameter)
+		{
+			client.say(target,`@${util.getDisplayName(user)} pours ${parse[1]} a nice cup of jasmine tea.`);
+		}
+		else{
+			client.say(target,`@${util.getDisplayName(user)} here, have a nice cup of jasmine tea.`);
+		}
+	}
 	else if(commandName === 'lastsong')
 	{
 		lastsongcounter.incCounter();
@@ -163,7 +173,7 @@ function onMessageHandler (target, user, msg, self) {
 	}
 	else if(commandName === 'help')
 	{
-		client.say(target, `Available commands: !counter, !quote, !help, !beer, !lastsong, !love`);
+		client.say(target, `Available commands: !counter, !quote, !help, !beer, !tea, !lastsong, !favsong, !love`);
 		return;
 	}
 }
@@ -220,7 +230,6 @@ schedule.scheduleJob('0 4 * * *', () => {
 	lastsongcounter.resetCounter();
 	wrongbuttoncounter.resetCounter();
 	console.log('Triggered at 4 am. Reset all counter to 0');
-
 });
 
 //cach Exception and write them to the logfile

@@ -14,6 +14,7 @@ Command | Cescription | Usage
 ----------------|--------------|-------
 `!help` | shows a list of all commands | `!help`
 `!beer` | give yourself or someone a beer | `!beer`, `!beer @UserName`
+`!tea` | give yourself or someone a tea | `!tea`, `!tea @UserName`
 `!counter` | shows how many times Jimmy pressed the wrong button | `!counter`
 `!counter++` | increse the counter. Use only when he pressed a wrong button | `!counter++`
 `!quote` | shows one of many famous quotes from Jimmy | `!quote`
