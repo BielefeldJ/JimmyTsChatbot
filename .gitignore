@@ -105,3 +105,6 @@ dist
 
 #ignore real config file
 config.js
+
+#ignore test script
+test.js
