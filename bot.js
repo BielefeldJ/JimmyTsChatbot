@@ -11,6 +11,7 @@ const util = require('./userutil.js');
 //init counter
 const wrongbuttoncounter = new Counter();
 const lastsongcounter = new Counter();
+const favsongcounter = new Counter();
 
 //use logfiles
 var access = fs.createWriteStream('access.log')
@@ -155,6 +156,11 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target,textimages.love);
 		return;
 	}
+	else if (commandName === 'favsong')
+	{
+		favsongcounter.incCounter();
+		client.say(target,`${answers.getFavSongCall()}. (${favsongcounter.getCounter} x).`);
+	}
 	else if(commandName === 'help')
 	{
 		client.say(target, `Available commands: !counter, !quote, !help, !beer, !lastsong, !love`);
@@ -176,7 +182,7 @@ function onRaidHandler(target, username, viewers)
 //Called every time someone cheers some Bits
 function onCheerHandler(target, user, message)
 {
-	client.say(target,`@${util.getDisplayName(user)} cheert with bits! Thank you so much <3`);
+	client.say(target,`@${util.getDisplayName(user)} cheered with bits! Thank you so much <3`);
 }
 
 //called every time someone hosts jimmys channel
