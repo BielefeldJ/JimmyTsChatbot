@@ -186,7 +186,7 @@ function onConnectedHandler (addr, port) {
 //Called every time someone raids the channel
 function onRaidHandler(target, username, viewers)
 {
-	client.say(target,`Thank you ${username} for the Raid!! Welcome to all of the ${viewers} to Jimmys Channel! Enjoy your stay!`);
+	client.say(target,`Thank you ${username} for the Raid with ${viewers} viewer!! Welcome everyone to Jimmys Channel! Enjoy your stay!`);
 }
 
 //Called every time someone cheers some Bits
