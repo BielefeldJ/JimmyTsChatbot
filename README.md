@@ -18,6 +18,7 @@ Command | Cescription | Usage
 `!counter++` | increse the counter. Use only when he pressed a wrong button | `!counter++`
 `!quote` | shows one of many famous quotes from Jimmy | `!quote`
 `!lastsong` | Yes this really is the last song! | `!lastsong`
+`!favsong` | Did you know? this is Jimmys favorite song | `!favsong`
 `!love` | shows a lot of love in chat | `!love`
 
 ### Mods ###
