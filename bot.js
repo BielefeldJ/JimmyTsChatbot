@@ -180,9 +180,14 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target, `Please check out Jimmy on his social accounts: 🍿🍿🍿 Twitter: https://twitter.com/jimmytaenaka 🍿🍿🍿 Instagram: https://www.instagram.com/jimmytaenaka 🍿🍿🍿 IMDb: https://www.imdb.com/name/nm0846359/`);
 		return;
 	}
+	else if (commandName === 'discord')
+	{
+		client.say(target, `Join Jimmy on Discord: https://discord.gg/DxmkSgPKCF`);
+		return;
+	}
 	else if(commandName === 'help')
 	{
-		client.say(target, `Available commands: !counter, !quote, !help, !beer, !tea, !lastsong, !favsong, !love, !socials`);
+		client.say(target, `Available commands: !counter, !quote, !help, !beer, !tea, !lastsong, !favsong, !love, !socials, !discord`);
 		return;
 	}
 }
