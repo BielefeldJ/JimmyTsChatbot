@@ -169,6 +169,11 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target,textimages.love);
 		return;
 	}
+	else if(commandName === 'heart')
+	{
+		client.say(target, textimages.heart);
+		return;
+	}
 	else if (commandName === 'favsong')
 	{
 		favsongcounter.incCounter();
@@ -177,7 +182,7 @@ function onMessageHandler (target, user, msg, self) {
 	}
 	else if(commandName === 'socials')
 	{
-		client.say(target, `Please check out Jimmy on his social accounts: 🍿🍿🍿 Twitter: https://twitter.com/jimmytaenaka 🍿🍿🍿 Instagram: https://www.instagram.com/jimmytaenaka 🍿🍿🍿 IMDb: https://www.imdb.com/name/nm0846359/`);
+		client.say(target, `Please check out Jimmy on his social accounts: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Twitter: https://twitter.com/jimmytaenaka ⠀⠀⠀⠀ Instagram: https://www.instagram.com/jimmytaenaka ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ IMDb: https://www.imdb.com/name/nm0846359/`);
 		return;
 	}
 	else if (commandName === 'discord')
@@ -187,7 +192,7 @@ function onMessageHandler (target, user, msg, self) {
 	}
 	else if(commandName === 'help')
 	{
-		client.say(target, `Available commands: !counter, !quote, !help, !beer, !tea, !lastsong, !favsong, !love, !socials, !discord`);
+		client.say(target, `Available commands: !counter, !quote, !help, !beer, !tea, !lastsong, !favsong, !love, !heart, !socials, !discord`);
 		return;
 	}
 }
