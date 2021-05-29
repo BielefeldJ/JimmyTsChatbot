@@ -175,9 +175,14 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target,`${answers.getFavSongCall()}. (${favsongcounter.getCounter} x).`);
 		return;
 	}
+	else if(commandName === 'socials')
+	{
+		client.say(target, `Please check out Jimmy on his social accounts: 🍿🍿🍿 Twitter: https://twitter.com/jimmytaenaka 🍿🍿🍿 Instagram: https://www.instagram.com/jimmytaenaka 🍿🍿🍿 IMDb: https://www.imdb.com/name/nm0846359/`);
+		return;
+	}
 	else if(commandName === 'help')
 	{
-		client.say(target, `Available commands: !counter, !quote, !help, !beer, !tea, !lastsong, !favsong, !love`);
+		client.say(target, `Available commands: !counter, !quote, !help, !beer, !tea, !lastsong, !favsong, !love, !socials`);
 		return;
 	}
 }
