@@ -90,7 +90,7 @@ function onMessageHandler (target, user, msg, self) {
 		else if(commandName === 'shutdown') //shutdown the bot
 		{
 			client.say(target,`Okay Boss! <3 Bye bye o/`);			
-			proc.exit();
+			proc.exit();			
 		}
 		
 	}
@@ -131,6 +131,7 @@ function onMessageHandler (target, user, msg, self) {
 	else if(commandName === 'quote')
 	{
 		client.say(target, answers.getRandomJimmyQuote());
+		return;
 	}
 	else if(commandName === 'beer')
 	{
@@ -150,9 +151,11 @@ function onMessageHandler (target, user, msg, self) {
 		if(hasParameter)
 		{
 			client.say(target,`@${util.getDisplayName(user)} pours ${parse[1]} a nice cup of jasmine tea.`);
+			return;
 		}
 		else{
 			client.say(target,`@${util.getDisplayName(user)} here, have a nice cup of jasmine tea.`);
+			return;
 		}
 	}
 	else if(commandName === 'lastsong')
@@ -170,6 +173,7 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		favsongcounter.incCounter();
 		client.say(target,`${answers.getFavSongCall()}. (${favsongcounter.getCounter} x).`);
+		return;
 	}
 	else if(commandName === 'help')
 	{
