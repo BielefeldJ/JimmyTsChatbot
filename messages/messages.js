@@ -43,7 +43,8 @@ exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !te
 exports.shoutoutMsg = (soToUser) => `Big shoutout to '${soToUser}' please follow his/her channel! ✨✨ https://www.twitch.tv/${soToUser.substring(1)}`;
 exports.wrongUsageMsg = () => `Did Jimmy use this command again? Jeez Jimmy. Its '!so @username' You can only specify one thing.`;
 //!setcounter
-exports.setCounterMsg = (counter) => `Wrong button counter set to ${counter}.`;
+exports.setCounterMsg = (counter) => `Counter set to ${counter}.`;
+exports.counterNotFoundMsg = (countername) => `Counter with name ${countername} not found`;
 //!welcome
 exports.welcomeMsg = () => `Welcome to Jimmys stream!! Remember to follow and subscribe. ❤️💞`;
 //Botowner commands

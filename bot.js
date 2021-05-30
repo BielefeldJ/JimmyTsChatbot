@@ -122,11 +122,30 @@ function onMessageHandler (target, user, msg, self) {
 			}
 
 		}
+		//DEFAULT set the wrong button counter to a value given as parameter
+		//If a specific counter is fiven, sets it a value (first parameter is the counter name in countersarray seccond the new value)
 		else if(commandName === 'setcounter' && hasParameter) 
-		{	
-			wrongbuttoncounter.setCounter = parseInt(parse[1]);
-			client.say(target,messages.setCounterMsg(wrongbuttoncounter.getCounter));
-			return;
+		{
+			if(hasSecondParameter)
+			{
+				if(parse[1] in counters)
+				{
+					counters[parse[1]].setCounter = parseInt(parse[2]);
+					client.say(target,messages.setCounterMsg(counters[parse[1]].getCounter));
+					return;
+				}
+				else
+				{
+					client.say(target,messages.counterNotFoundMsg(parse[1]));
+					return;
+				}
+			}
+			else 
+			{			
+				wrongbuttoncounter.setCounter = parseInt(parse[1]);
+				client.say(target,messages.setCounterMsg(wrongbuttoncounter.getCounter));
+				return;
+			}
 		}
 		else if(commandName === 'welcome')
 		{
