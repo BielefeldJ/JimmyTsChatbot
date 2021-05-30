@@ -24,6 +24,7 @@ Command | Cescription | Usage
 `!heart` | shows a heart in chat | `!heart`
 `!discord` | shows discord invite link | `!discord`
 `!socials` | shows all social links | `!socials`
+`!times` | shows Jimmys stream times | `!times`
 
 
 ### Mods ###

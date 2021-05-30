@@ -228,6 +228,11 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target, messages.discordMsg());
 		return;
 	}
+	else if (commandName === 'times')
+	{
+		client.say(target,messages.timesMsg());
+		return;
+	}
 	else if(commandName === 'help')
 	{
 		client.say(target, messages.helpMsg());

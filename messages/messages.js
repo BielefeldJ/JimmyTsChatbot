@@ -36,11 +36,13 @@ exports.teaMsg = (displayname) => `@${displayname} here, have a nice cup of jasm
 exports.socialsMsg = () => `Please check out Jimmy on his social accounts: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Twitter: https://twitter.com/jimmytaenaka ⠀⠀⠀⠀ Instagram: https://www.instagram.com/jimmytaenaka ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ IMDb: https://www.imdb.com/name/nm0846359/`;
 //!discord
 exports.discordMsg = () => `Join Jimmy on Discord: https://discord.gg/DxmkSgPKCF`;
+//!times
+exports.timesMsg = () => `Jimmy usaly streams on Sunday, Tuesday and Thursday at 21:00 SGT (GMT+8)`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !lastsong, !favsong, !love, !heart, !socials, !discord`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !lastsong, !favsong, !love, !heart, !socials, !discord, !times`;
 //Mod and VIP commands
 //!so
-exports.shoutoutMsg = (soToUser) => `Big shoutout to '${soToUser}' please follow his/her channel! ✨✨ https://www.twitch.tv/${soToUser.substring(1)}`;
+exports.shoutoutMsg = (soToUser) => `Big shoutout to '${soToUser}' please follow their channel! ✨✨ https://www.twitch.tv/${soToUser.substring(1)}`;
 exports.wrongUsageMsg = () => `Did Jimmy use this command again? Jeez Jimmy. Its '!so @username' You can only specify one thing.`;
 //!setcounter
 exports.setCounterMsg = (counter) => `Counter set to ${counter}.`;
