@@ -2,11 +2,12 @@ const schedule = require('node-schedule');
 const tmi = require('tmi.js');
 const fs = require('fs');
 const proc = require('process');
-const Counter = require('./counter.js');
+const Counter = require('./utilities/counter.js');
 const config = require('./config.js');
-const answers = require('./arrays.js');
-const textimages = require('./textimages.js');
-const util = require('./userutil.js');
+const randomanswers = require('./messages/randommessagearrays.js');
+const messages = require('./messages/messages.js')
+const textimages = require('./messages/textimages.js');
+const util = require('./utilities/userutil.js');
 
 //init counter
 const wrongbuttoncounter = new Counter();
@@ -77,41 +78,41 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		if(commandName === 'heyhey') //ping command to check if the bot is sill running 
 		{
-			client.say(target,`Yeeyyy Prof is here!! <3 I am still up and running :3`);	
+			client.say(target,messages.ping());	
 			return;		
 		}
 		else if (commandName === 'resetall') //resetz all counter to 0
 		{
 			wrongbuttoncounter.resetCounter();
-			lastsongcounter.resetCounter();
-			client.say(target,`All counter to 0.`);
+			lastsongcounter.resetCounter();			
+			client.say(target,messages.resetAllMsg());
 			return;
 		}
 		else if(commandName === 'shutdown') //shutdown the bot
 		{
-			client.say(target,`Okay Boss! <3 Bye bye o/`);			
+			client.say(target,messages.shutdownMsg());			
 			proc.exit();			
 		}
 		
 	}
 
-	//Mod commands
+	//Mod and VIP commands
 	if(isModUp || isVIP)
 	{
 		if(commandName === 'so' && hasParameter) //shoutout someone
 		{
-			client.say(target,`Big shoutout to '${parse[1]}' please follow and subscribe ✨✨ www.twitch.tv/${parse[1].substring(1)}`);		
+			client.say(target,messages.shoutoutMsg(parse[1]));		
 			return;
 		}
 		else if(commandName === 'setcounter' && hasParameter) //set the wrong button counter to a value given as parameter
 		{
 			wrongbuttoncounter.setCounter = parseInt(parse[1]);
-			client.say(target,`Counter set to ${wrongbuttoncounter.getCounter}.`);
+			client.say(target,messages.setCounterMsg(wrongbuttoncounter.getCounter));
 			return;
 		}
 		else if(commandName === 'welcome')
 		{
-			client.say(target, `Welcome to Jimmys stream!! Remember to follow and subscribe. ❤️💞`);
+			client.say(target, messages.welcomeMsg());
 			return;
 		}
 	}
@@ -119,30 +120,30 @@ function onMessageHandler (target, user, msg, self) {
 	// User commands
 	if (commandName === 'counter') 
 	{
-		client.say(target, `Jimmy pressed the wrong button ${wrongbuttoncounter.getCounter} times today!`);
+		client.say(target, messages.counterMsg(wrongbuttoncounter.getCounter)); 
 		return;
 	} 
 	else if (commandName === 'counter++') 
 	{
 		wrongbuttoncounter.incCounter();
-		client.say(target, `Wrong button counter is now: ${wrongbuttoncounter.getCounter}`);
+		client.say(target, messages.incCounterMsg(wrongbuttoncounter.getCounter));
 		return;
 	}
 	else if(commandName === 'quote')
 	{
-		client.say(target, answers.getRandomJimmyQuote());
+		client.say(target, randomanswers.getRandomJimmyQuote());
 		return;
 	}
 	else if(commandName === 'beer')
 	{
 		if(hasParameter)
 		{
-			client.say(target,`${util.getDisplayName(user)} gives a cold Beer to ${parse[1]}! Cheers`);
+			client.say(target,messages.beerToUserMsg(util.getDisplayName(user),parse[1]));
 			return;
 		}
 		else
 		{
-			client.say(target,`Hey ${util.getDisplayName(user)}, here. Have a nice Kirinbeer!`);
+			client.say(target,messages.beerMsg(util.getDisplayName(user)));
 			return;
 		}
 	}
@@ -150,18 +151,18 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		if(hasParameter)
 		{
-			client.say(target,`@${util.getDisplayName(user)} pours ${parse[1]} a nice cup of jasmine tea.`);
+			client.say(target,messages.teaToUserMsg(util.getDisplayName(user),parse[1]));
 			return;
 		}
 		else{
-			client.say(target,`@${util.getDisplayName(user)} here, have a nice cup of jasmine tea.`);
+			client.say(target,messages.teaMsg(util.getDisplayName(user)));
 			return;
 		}
 	}
 	else if(commandName === 'lastsong')
 	{
 		lastsongcounter.incCounter();
-		client.say(target,`${answers.getRandomLastSongCall()}, ${lastsongcounter.getCounter}x now. `);
+		client.say(target,`${randomanswers.getRandomLastSongCall()}, ${lastsongcounter.getCounter}x now. `);
 		return;
 	}
 	else if(commandName === 'love')
@@ -177,22 +178,22 @@ function onMessageHandler (target, user, msg, self) {
 	else if (commandName === 'favsong')
 	{
 		favsongcounter.incCounter();
-		client.say(target,`${answers.getFavSongCall()}. (${favsongcounter.getCounter} x).`);
+		client.say(target,`${randomanswers.getFavSongCall()}. (${favsongcounter.getCounter} x).`);
 		return;
 	}
 	else if(commandName === 'socials')
 	{
-		client.say(target, `Please check out Jimmy on his social accounts: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Twitter: https://twitter.com/jimmytaenaka ⠀⠀⠀⠀ Instagram: https://www.instagram.com/jimmytaenaka ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ IMDb: https://www.imdb.com/name/nm0846359/`);
+		client.say(target, messages.socialsMsg());
 		return;
 	}
 	else if (commandName === 'discord')
 	{
-		client.say(target, `Join Jimmy on Discord: https://discord.gg/DxmkSgPKCF`);
+		client.say(target, messages.discordMsg());
 		return;
 	}
 	else if(commandName === 'help')
 	{
-		client.say(target, `Available commands: !counter, !quote, !help, !beer, !tea, !lastsong, !favsong, !love, !heart, !socials, !discord`);
+		client.say(target, messages.helpMsg());
 		return;
 	}
 }
@@ -205,43 +206,43 @@ function onConnectedHandler (addr, port) {
 //Called every time someone raids the channel
 function onRaidHandler(target, username, viewers)
 {
-	client.say(target,`Thank you ${username} for the Raid with ${viewers} viewer!! Welcome everyone to Jimmys Channel! Enjoy your stay!`);
+	client.say(target,messages.raidMessage(username,viewers));
 }
 
 //Called every time someone cheers some Bits
 function onCheerHandler(target, user, message)
 {
-	client.say(target,`@${util.getDisplayName(user)} cheered with bits! Thank you so much <3`);
+	client.say(target,messages.cheerMessage(util.getDisplayName(user)));
 }
 
-//called every time someone hosts jimmys channel
+//called every time someone hosts the channel
 function onHostedHandler(target, username, viewers, autohost)
 {
-	client.say(target,`${username} is hosting with ${viewers} viewers! Thank you!`);		
+	client.say(target,messages.hostedMessage(username,viewers));		
 }
 
-//Called every time someone subs to Jimmys channel
+//Called every time someone subs to the channel
 function onSubHandler(target, username, method, message, user)
 {
-	client.say(target,`Thank you for your sub @${username}! Welcome to Jimmys channel!`);
+	client.say(target,messages.subMessage(util.getDisplayName(user)));
 }
 
-//called every time someone resubs to Jimmys channel
+//called every time someone resubs to the channel
 function onResubHandler(target, username, months, message, user, methods)
 {
-	client.say(target,`Woho @${util.getDisplayName(user)}.Thank you for your ${util.getCumulativeMonth(user)} resub! <3`);
+	client.say(target,messages.resubMessage(util.getDisplayName(user),util.getCumulativeMonth(user)));
 }
 
 //called every time someone gifts a sub to another user of his choise
 function onSubgiftHandler(target, username, streakMonths, recipient, methods, user)
 {
-	client.say(target,`@${util.getDisplayName(user)} just gifted a sub to @${util.getRecipientDisplayName(user)}! Thank you so much. This was your ${util.getSenderGiftCount(user)}. giftsub here <3`);
+	client.say(target,messages.giftsubMessage(util.getDisplayName(user),util.getRecipientDisplayName(user),util.getSenderGiftCount(user)));
 }
 
 //called every time someone gifts one or more subs to random viewer aka subbomb
 function onRandomSubgiftHandler(target, username, numbOfSubs, methods, user)
 {
-	client.say(target,`@${util.getDisplayName(user)} just gifted ${numbOfSubs} Giftsubs to Jimmys community! Thank you so so much!! Thats a total of ${util.getSenderGiftCount(user)} now. Wow <3`);
+	client.say(target,messages.communityGiftsubMessage(util.getDisplayName(user),numbOfSubs,util.getSenderGiftCount(user)));
 }
 
 //runns every day at 4:00 in the morning to reset all counter for the next stream
