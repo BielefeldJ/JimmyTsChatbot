@@ -14,7 +14,7 @@ exports.subMessage = (displayname) => `Thank you for your sub @${displayname}! W
 //someone resubs to the channel
 exports.resubMessage = (displayname,totalmonth) => `Woho @${displayname}.Thank you for your ${totalmonth} resub! <3`;
 //someone gifts a sub to user of choise
-exports.giftsubMessage = (gifter,recipient,totalgiftsubs) => `@${gifter} just gifted a sub to @${recipient}! Thank you so much. This was your ${totalgiftsubs}. giftsub here <3`;
+exports.giftsubMessage = (gifter,recipient) => `@${gifter} just gifted a sub to @${recipient}! Thank you so so much. <3`;
 //someone gitfs subs to random user
 exports.communityGiftsubMessage = (displayname,numbOfSubs,totalgiftsubs) => `@${displayname} just gifted ${numbOfSubs} Giftsubs to Jimmys community! Thank you so so much!! Thats a total of ${totalgiftsubs} now. Wow <3`;
 //==================================================================

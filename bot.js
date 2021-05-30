@@ -278,7 +278,7 @@ function onResubHandler(target, username, months, message, user, methods)
 //called every time someone gifts a sub to another user of his choise
 function onSubgiftHandler(target, username, streakMonths, recipient, methods, user)
 {
-	client.say(target,messages.giftsubMessage(util.getDisplayName(user),util.getRecipientDisplayName(user),util.getSenderGiftCount(user)));
+	client.say(target,messages.giftsubMessage(util.getDisplayName(user),util.getRecipientDisplayName(user)));
 }
 
 //called every time someone gifts one or more subs to random viewer aka subbomb
