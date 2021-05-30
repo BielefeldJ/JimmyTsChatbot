@@ -21,12 +21,16 @@ Command | Cescription | Usage
 `!lastsong` | Yes this really is the last song! | `!lastsong`
 `!favsong` | Did you know? this is Jimmys favorite song | `!favsong`
 `!love` | shows a lot of love in chat | `!love`
+`!heart` | shows a heart in chat | `!heart`
+`!discord` | shows discord invite link | `!discord`
+`!socials` | shows all social links | `!socials`
+
 
 ### Mods ###
 Command | Cescription | Usage
 ----------------|--------------|-------
 `!so` | give a shoutout to someone in chat | `!so @UserName`
-`!setcounter` | sets the counter for wrong buttons pressed to a value | `!setcounter 10`
+`!setcounter` | sets the counter for wrong buttons pressed to a value | `!setcounter value` `!setcounter countername value`
 `!welcome` | welcomes everyone to this channel | `!welcome`
 
 How to run
