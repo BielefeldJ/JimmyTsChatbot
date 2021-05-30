@@ -14,6 +14,12 @@ const wrongbuttoncounter = new Counter();
 const lastsongcounter = new Counter();
 const favsongcounter = new Counter();
 
+const counters ={
+	wbc : wrongbuttoncounter,
+	lsc : lastsongcounter,
+	fsc : favsongcounter
+};
+
 //use logfiles
 var access = fs.createWriteStream('access.log')
 	  , error = fs.createWriteStream('error.log');
@@ -70,6 +76,7 @@ function onMessageHandler (target, user, msg, self) {
 
 	//used to check if the user send parameter
 	let hasParameter = typeof parse[1] !== 'undefined';
+	let hasSecondParameter = typeof parse[2] !== 'undefined';
 
 	console.log(`[${target} | ${user.username} | (${user['message-type']})] ${commandName} receved as command!`);
 
@@ -83,8 +90,10 @@ function onMessageHandler (target, user, msg, self) {
 		}
 		else if (commandName === 'resetall') //resetz all counter to 0
 		{
-			wrongbuttoncounter.resetCounter();
-			lastsongcounter.resetCounter();			
+			for(c in counters)
+			{
+				counters[c].resetCounter();
+			}	
 			client.say(target,messages.resetAllMsg());
 			return;
 		}
@@ -101,7 +110,7 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		if(commandName === 'so' && hasParameter) //shoutout someone
 		{
-			if(typeof parse[2] !== 'undefined' && typeof parse[3] !== 'undefined') //Someone used the !so command wrong
+			if(hasSecondParameter && typeof parse[3] !== 'undefined') //Someone used the !so command wrong
 			{
 				client.say(target,messages.wrongUsageMsg());
 				return;
@@ -113,8 +122,8 @@ function onMessageHandler (target, user, msg, self) {
 			}
 
 		}
-		else if(commandName === 'setcounter' && hasParameter) //set the wrong button counter to a value given as parameter
-		{
+		else if(commandName === 'setcounter' && hasParameter) 
+		{	
 			wrongbuttoncounter.setCounter = parseInt(parse[1]);
 			client.say(target,messages.setCounterMsg(wrongbuttoncounter.getCounter));
 			return;
@@ -256,9 +265,10 @@ function onRandomSubgiftHandler(target, username, numbOfSubs, methods, user)
 
 //runns every day at 4:00 in the morning to reset all counter for the next stream
 schedule.scheduleJob('0 4 * * *', () => { 
-	lastsongcounter.resetCounter();
-	wrongbuttoncounter.resetCounter();
-	favsongcounter.resetCounter();
+	for(c in counters)
+	{
+		counters[c].resetCounter();
+	}
 	console.log('Triggered at 4 am. Reset all counter to 0');
 });
 
