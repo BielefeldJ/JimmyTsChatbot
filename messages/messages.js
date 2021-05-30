@@ -41,6 +41,7 @@ exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !te
 //Mod and VIP commands
 //!so
 exports.shoutoutMsg = (soToUser) => `Big shoutout to '${soToUser}' please follow his/her channel! ✨✨ https://www.twitch.tv/${soToUser.substring(1)}`;
+exports.wrongUsageMsg = () => `Did Jimmy use this command again? Jeez Jimmy. Its '!so @username' You can only specify one thing.`;
 //!setcounter
 exports.setCounterMsg = (counter) => `Wrong button counter set to ${counter}.`;
 //!welcome

@@ -51,7 +51,7 @@ function onMessageHandler (target, user, msg, self) {
 
 	// This isn't a command since it has no prefix:
 	if (msg.substr(0, 1) !== commandPrefix) {
-		console.log(`[${target} (${user['message-type']})] ${msg}`);
+		console.log(`[${target} | ${user.username} | (${user['message-type']})] ${msg}`);
 		return;
 	}
 	
@@ -66,7 +66,7 @@ function onMessageHandler (target, user, msg, self) {
 	let isBroadcaster = target.slice(1) === user.username; //check if user broadcaster by comparing current channel with the username of the sender
 	let isModUp = isMod || isBroadcaster;
 	let isVIP = util.getUserVIP(user);
-	let isBotOwner = user.username === "profdrbielefeld";
+	let isBotOwner = user.username === "profdrbielefeld"; //twitch username of the botowner
 
 	//used to check if the user send parameter
 	let hasParameter = typeof parse[1] !== 'undefined';
@@ -101,8 +101,17 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		if(commandName === 'so' && hasParameter) //shoutout someone
 		{
-			client.say(target,messages.shoutoutMsg(parse[1]));		
-			return;
+			if(typeof parse[2] !== 'undefined' && typeof parse[3] !== 'undefined') //Someone used the !so command wrong
+			{
+				client.say(target,messages.wrongUsageMsg());
+				return;
+			}
+			else
+			{
+				client.say(target,messages.shoutoutMsg(parse[1]));		
+				return;
+			}
+
 		}
 		else if(commandName === 'setcounter' && hasParameter) //set the wrong button counter to a value given as parameter
 		{
