@@ -167,6 +167,11 @@ function onMessageHandler (target, user, msg, self) {
 			client.say(target,messages.awesomMessage());
 			return;
 		}
+		else if(commandName === 'share')
+		{
+			client.say(target,messages.shareMessage());
+			return;
+		}
 	}
 
 	// User commands

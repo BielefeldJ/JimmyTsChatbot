@@ -23,6 +23,8 @@ exports.hiMessage = () => `Hey hey nice to see you! Welcome to the most chill st
 exports.modsMessage = () => `Shout out to my mods!!! They are super cool!!`;
 //awesom Message
 exports.awesomMessage = () => `All you awesome people,thank you so so much for hanging out with us!`;
+//share command Message 
+exports.shareMessage = () => `All you awesome people please host,share,follow and subscribe!!`;
 //==================================================================
 
 //Messages for all commands from here on
