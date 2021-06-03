@@ -17,7 +17,7 @@ Command | Cescription | Usage
 `!tea` | give yourself or someone a tea | `!tea`, `!tea @UserName`
 `!refill` | refill someones glass | `!refill @UserName`
 `!counter` | shows how many times Jimmy pressed the wrong button | `!counter`
-`!counter++` | increse the counter. Use only when he pressed a wrong button | `!counter++`
+`!counter++` | increase the counter. Use only when he pressed a wrong button | `!counter++`
 `!quote` | shows one of many famous quotes from Jimmy | `!quote`
 `!lastsong` | Yes this really is the last song! | `!lastsong`
 `!favsong` | Did you know? this is Jimmys favorite song | `!favsong`
@@ -31,7 +31,7 @@ Command | Cescription | Usage
 
 
 ### Mods ###
-Command | Cescription | Usage
+Command | Description | Usage
 ----------------|--------------|-------
 `!so` | give a shoutout to someone in chat | `!so @UserName`
 `!setcounter` | sets the counter for wrong buttons pressed to a value | `!setcounter value` `!setcounter countername value`
