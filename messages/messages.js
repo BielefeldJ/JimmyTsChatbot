@@ -41,7 +41,7 @@ exports.discordMsg = () => `Join Jimmy on Discord: https://discord.gg/DxmkSgPKCF
 //!times
 exports.timesMsg = () => `Jimmy usaly streams on Sunday, Tuesday and Thursday at 21:00 SGT (GMT+8)`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !lastsong, !favsong, !love, !heart, !socials, !discord, !times`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !socials, !discord, !times`;
 //==================================================================
 //Mod and VIP commands
 //!so
