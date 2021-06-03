@@ -162,6 +162,11 @@ function onMessageHandler (target, user, msg, self) {
 			client.say(target,messages.modsMessage());
 			return;
 		}
+		else if(commandName === 'awesome')
+		{
+			client.say(target,messages.awesomMessage());
+			return;
+		}
 	}
 
 	// User commands

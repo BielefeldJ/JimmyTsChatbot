@@ -21,6 +21,8 @@ exports.communityGiftsubMessage = (displayname,numbOfSubs,totalgiftsubs) => `@${
 exports.hiMessage = () => `Hey hey nice to see you! Welcome to the most chill stream around!`;
 //Love to mdos message
 exports.modsMessage = () => `Shout out to my mods!!! They are super cool!!`;
+//awesom Message
+exports.awesomMessage = () => `All you awesome people,thank you so so much for hanging out with us!`;
 //==================================================================
 
 //Messages for all commands from here on
