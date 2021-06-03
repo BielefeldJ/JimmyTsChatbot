@@ -172,6 +172,11 @@ function onMessageHandler (target, user, msg, self) {
 			client.say(target,messages.shareMessage());
 			return;
 		}
+		else if(commandName === 'sub')
+		{
+			client.say(target,messages.subtoChannelMessage());
+			return;
+		}
 	}
 
 	// User commands

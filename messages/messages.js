@@ -17,14 +17,6 @@ exports.resubMessage = (displayname,totalmonth) => `Woho @${displayname}.Thank y
 exports.giftsubMessage = (gifter,recipient) => `@${gifter} just gifted a sub to @${recipient}! Thank you so so much. <3`;
 //someone gitfs subs to random user
 exports.communityGiftsubMessage = (displayname,numbOfSubs,totalgiftsubs) => `@${displayname} just gifted ${numbOfSubs} Giftsubs to Jimmys community! Thank you so so much!! Thats a total of ${totalgiftsubs} now. Wow <3`;
-//Hi message
-exports.hiMessage = () => `Hey hey nice to see you! Welcome to the most chill stream around!`;
-//Love to mdos message
-exports.modsMessage = () => `Shout out to my mods!!! They are super cool!!`;
-//awesom Message
-exports.awesomMessage = () => `All you awesome people,thank you so so much for hanging out with us!`;
-//share command Message 
-exports.shareMessage = () => `All you awesome people please host,share,follow and subscribe!!`;
 //==================================================================
 
 //Messages for all commands from here on
@@ -48,6 +40,7 @@ exports.discordMsg = () => `Join Jimmy on Discord: https://discord.gg/DxmkSgPKCF
 exports.timesMsg = () => `Jimmy usaly streams on Sunday, Tuesday and Thursday at 21:00 SGT (GMT+8)`;
 //!help
 exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !lastsong, !favsong, !love, !heart, !socials, !discord, !times`;
+//==================================================================
 //Mod and VIP commands
 //!so
 exports.shoutoutMsg = (soToUser) => `Big shoutout to '${soToUser}' please follow their channel! ✨✨ https://www.twitch.tv/${soToUser.substring(1)}`;
@@ -57,6 +50,17 @@ exports.setCounterMsg = (counter) => `Counter set to ${counter}.`;
 exports.counterNotFoundMsg = (countername) => `Counter with name ${countername} not found`;
 //!welcome
 exports.welcomeMsg = () => `Welcome to Jimmys stream!! Remember to follow and subscribe. ❤️💞`;
+//Hi message
+exports.hiMessage = () => `Hey hey nice to see you! Welcome to the most chill stream around!`;
+//Love to mdos message
+exports.modsMessage = () => `Shout out to my mods!!! They are super cool!!`;
+//awesom Message
+exports.awesomMessage = () => `All you awesome people,thank you so so much for hanging out with us!`;
+//share command Message 
+exports.shareMessage = () => `All you awesome people please host,share,follow and subscribe!!`;
+//subs suport the channel! Message
+exports.subtoChannelMessage = () => `All you awesome people please host,share,follow and subscribe!!`;
+//==================================================================
 //Botowner commands
 //!heyhey 
 exports.ping = () => `Yeeyyy Prof is here!! <3 I am still up and running :3`;
