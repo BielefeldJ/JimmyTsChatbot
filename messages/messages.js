@@ -42,8 +42,10 @@ exports.discordMsg = () => `Join Jimmy on Discord: https://discord.gg/DxmkSgPKCF
 exports.timesMsg = () => `Jimmy usaly streams on Sunday, Tuesday and Thursday at 21:00 SGT (GMT+8)`;
 //!boogie
 exports.boogieMsg = () => `♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o･)┛♪`;
+//!efe
+exports.efeMsg = () => `Everybody follow everybody. Let's build this community!!`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !socials, !discord, !times, !boogie`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !socials, !discord, !times, !boogie, !efe`;
 //==================================================================
 //Mod and VIP commands
 //!so

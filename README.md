@@ -27,6 +27,7 @@ Command | Cescription | Usage
 `!socials` | shows all social links | `!socials`
 `!times` | shows Jimmys stream times | `!times`
 `!boogie` | dance smiley in chat | `!boogie`
+`!efe` | pls follow everyone message | `!efe`
 
 
 ### Mods ###

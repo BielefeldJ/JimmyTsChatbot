@@ -245,7 +245,7 @@ function onMessageHandler (target, user, msg, self) {
 	else if (commandName === 'favsong')
 	{
 		favsongcounter.incCounter();
-		client.say(target,`${randomanswers.getFavSongCall()}. (${favsongcounter.getCounter} x).`);
+		client.say(target,`${randomanswers.getFavSongCall()}. (${favsongcounter.getCounter}x).`);
 		return;
 	}
 	else if(commandName === 'socials')
@@ -266,6 +266,11 @@ function onMessageHandler (target, user, msg, self) {
 	else if(commandName === 'boogie')
 	{
 		client.say(target,messages.boogieMsg());
+		return;
+	}
+	else if(commandName === 'efe')
+	{
+		client.say(target,messages.efeMsg());
 		return;
 	}
 	else if(commandName === 'help')
