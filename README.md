@@ -15,6 +15,7 @@ Command | Cescription | Usage
 `!help` | shows a list of all commands | `!help`
 `!beer` | give yourself or someone a beer | `!beer`, `!beer @UserName`
 `!tea` | give yourself or someone a tea | `!tea`, `!tea @UserName`
+`!refill` | refill someones glass | `!refill @UserName`
 `!counter` | shows how many times Jimmy pressed the wrong button | `!counter`
 `!counter++` | increse the counter. Use only when he pressed a wrong button | `!counter++`
 `!quote` | shows one of many famous quotes from Jimmy | `!quote`
@@ -25,6 +26,7 @@ Command | Cescription | Usage
 `!discord` | shows discord invite link | `!discord`
 `!socials` | shows all social links | `!socials`
 `!times` | shows Jimmys stream times | `!times`
+`!boogie` | dance smiley in chat | `!boogie`
 
 
 ### Mods ###
@@ -33,6 +35,11 @@ Command | Cescription | Usage
 `!so` | give a shoutout to someone in chat | `!so @UserName`
 `!setcounter` | sets the counter for wrong buttons pressed to a value | `!setcounter value` `!setcounter countername value`
 `!welcome` | welcomes everyone to this channel | `!welcome`
+`!hi` | Say hi in chat | `!hi`
+`!mods` | give a shoutout to the mods | `!mods`
+`!awesome` | You are awesome \o/ | `!awesome`
+`!share` | writes a please share this channel Message | `!share`
+`!sub` | writes a please sub Message | `!sub`
 
 How to run
 -------------
