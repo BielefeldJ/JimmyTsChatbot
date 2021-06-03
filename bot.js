@@ -152,6 +152,11 @@ function onMessageHandler (target, user, msg, self) {
 			client.say(target, messages.welcomeMsg());
 			return;
 		}
+		else if(commandName === 'hi')
+		{
+			client.say(target,messages.hiMessage());
+			return;
+		}
 	}
 
 	// User commands

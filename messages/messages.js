@@ -17,6 +17,8 @@ exports.resubMessage = (displayname,totalmonth) => `Woho @${displayname}.Thank y
 exports.giftsubMessage = (gifter,recipient) => `@${gifter} just gifted a sub to @${recipient}! Thank you so so much. <3`;
 //someone gitfs subs to random user
 exports.communityGiftsubMessage = (displayname,numbOfSubs,totalgiftsubs) => `@${displayname} just gifted ${numbOfSubs} Giftsubs to Jimmys community! Thank you so so much!! Thats a total of ${totalgiftsubs} now. Wow <3`;
+//Hi message
+exports.hiMessage = () => `Hey hey nice to see you! Welcome to the most chill stream around!`;
 //==================================================================
 
 //Messages for all commands from here on
