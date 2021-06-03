@@ -157,6 +157,11 @@ function onMessageHandler (target, user, msg, self) {
 			client.say(target,messages.hiMessage());
 			return;
 		}
+		else if(commandName === 'mods')
+		{
+			client.say(target,messages.modsMessage());
+			return;
+		}
 	}
 
 	// User commands

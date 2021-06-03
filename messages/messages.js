@@ -19,6 +19,8 @@ exports.giftsubMessage = (gifter,recipient) => `@${gifter} just gifted a sub to 
 exports.communityGiftsubMessage = (displayname,numbOfSubs,totalgiftsubs) => `@${displayname} just gifted ${numbOfSubs} Giftsubs to Jimmys community! Thank you so so much!! Thats a total of ${totalgiftsubs} now. Wow <3`;
 //Hi message
 exports.hiMessage = () => `Hey hey nice to see you! Welcome to the most chill stream around!`;
+//Love to mdos message
+exports.modsMessage = () => `Shout out to my mods!!! They are super cool!!`;
 //==================================================================
 
 //Messages for all commands from here on
