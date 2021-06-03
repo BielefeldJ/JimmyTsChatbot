@@ -40,8 +40,10 @@ exports.socialsMsg = () => `Please check out Jimmy on his social accounts: ⠀�
 exports.discordMsg = () => `Join Jimmy on Discord: https://discord.gg/DxmkSgPKCF`;
 //!times
 exports.timesMsg = () => `Jimmy usaly streams on Sunday, Tuesday and Thursday at 21:00 SGT (GMT+8)`;
+//!boogie
+exports.boogieMsg = () => `♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o･)┛♪`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !socials, !discord, !times`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !socials, !discord, !times, !boogie`;
 //==================================================================
 //Mod and VIP commands
 //!so

@@ -263,6 +263,11 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target,messages.timesMsg());
 		return;
 	}
+	else if(commandName === 'boogie')
+	{
+		client.say(target,messages.boogieMsg());
+		return;
+	}
 	else if(commandName === 'help')
 	{
 		client.say(target, messages.helpMsg());
