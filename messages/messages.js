@@ -32,6 +32,8 @@ exports.beerMsg = (displayname) => `Hey ${displayname}, here. Have a nice Kirinb
 //!tea
 exports.teaToUserMsg = (fromuser, touser) => `@${fromuser} pours ${touser} a nice cup of jasmine tea.`;
 exports.teaMsg = (displayname) => `@${displayname} here, have a nice cup of jasmine tea.`;
+//!refill
+exports.refillMsg = (fromuser, touser) => `${fromuser} has noticed the empty glass, and quickly sends over the barman with a refill to ${touser}. Nobody wants to see ${touser} with an empty glass`;
 //!socials
 exports.socialsMsg = () => `Please check out Jimmy on his social accounts: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Twitter: https://twitter.com/jimmytaenaka ⠀⠀⠀⠀ Instagram: https://www.instagram.com/jimmytaenaka ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ IMDb: https://www.imdb.com/name/nm0846359/`;
 //!discord
@@ -50,15 +52,15 @@ exports.setCounterMsg = (counter) => `Counter set to ${counter}.`;
 exports.counterNotFoundMsg = (countername) => `Counter with name ${countername} not found`;
 //!welcome
 exports.welcomeMsg = () => `Welcome to Jimmys stream!! Remember to follow and subscribe. ❤️💞`;
-//Hi message
+//!hi
 exports.hiMessage = () => `Hey hey nice to see you! Welcome to the most chill stream around!`;
-//Love to mdos message
+//!mods Love to mods message
 exports.modsMessage = () => `Shout out to my mods!!! They are super cool!!`;
-//awesom Message
+//!awesom Message
 exports.awesomMessage = () => `All you awesome people,thank you so so much for hanging out with us!`;
-//share command Message 
+//!share command Message 
 exports.shareMessage = () => `All you awesome people please host,share,follow and subscribe!!`;
-//subs suport the channel! Message
+//!sub suport the channel! Message
 exports.subtoChannelMessage = () => `While subbing is always optional, it's a great way to support the stream ! https://www.twitch.tv/jimmytaenaka/subscribe`;
 //==================================================================
 //Botowner commands

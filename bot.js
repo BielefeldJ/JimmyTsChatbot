@@ -221,6 +221,11 @@ function onMessageHandler (target, user, msg, self) {
 			return;
 		}
 	}
+	else if(commandName === 'refill' && hasParameter)
+	{
+		client.say(target,messages.refillMsg(util.getDisplayName(user),parse[1]));
+		return;
+	}
 	else if(commandName === 'lastsong')
 	{
 		lastsongcounter.incCounter();
