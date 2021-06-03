@@ -53,15 +53,15 @@ exports.counterNotFoundMsg = (countername) => `Counter with name ${countername} 
 //!welcome
 exports.welcomeMsg = () => `Welcome to Jimmys stream!! Remember to follow and subscribe. ❤️💞`;
 //!hi
-exports.hiMessage = () => `Hey hey nice to see you! Welcome to the most chill stream around!`;
+exports.hiMsg = () => `Hey hey nice to see you! Welcome to the most chill stream around!`;
 //!mods Love to mods message
-exports.modsMessage = () => `Shout out to my mods!!! They are super cool!!`;
+exports.modsMsg = () => `Shout out to my mods!!! They are super cool!!`;
 //!awesom Message
-exports.awesomMessage = () => `All you awesome people,thank you so so much for hanging out with us!`;
+exports.awesomMsg = () => `All you awesome people,thank you so so much for hanging out with us!`;
 //!share command Message 
-exports.shareMessage = () => `All you awesome people please host,share,follow and subscribe!!`;
+exports.shareMsg = () => `All you awesome people please host,share,follow and subscribe!!`;
 //!sub suport the channel! Message
-exports.subtoChannelMessage = () => `While subbing is always optional, it's a great way to support the stream ! https://www.twitch.tv/jimmytaenaka/subscribe`;
+exports.subMsg = () => `While subbing is always optional, it's a great way to support the stream ! https://www.twitch.tv/jimmytaenaka/subscribe`;
 //==================================================================
 //Botowner commands
 //!heyhey 

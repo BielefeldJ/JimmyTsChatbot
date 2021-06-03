@@ -154,27 +154,27 @@ function onMessageHandler (target, user, msg, self) {
 		}
 		else if(commandName === 'hi')
 		{
-			client.say(target,messages.hiMessage());
+			client.say(target,messages.hiMsg());
 			return;
 		}
 		else if(commandName === 'mods')
 		{
-			client.say(target,messages.modsMessage());
+			client.say(target,messages.modsMsg());
 			return;
 		}
 		else if(commandName === 'awesome')
 		{
-			client.say(target,messages.awesomMessage());
+			client.say(target,messages.awesomMsg());
 			return;
 		}
 		else if(commandName === 'share')
 		{
-			client.say(target,messages.shareMessage());
+			client.say(target,messages.shareMsg());
 			return;
 		}
 		else if(commandName === 'sub')
 		{
-			client.say(target,messages.subtoChannelMessage());
+			client.say(target,messages.subMsg());
 			return;
 		}
 	}
