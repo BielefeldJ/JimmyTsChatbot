@@ -59,7 +59,7 @@ exports.awesomMessage = () => `All you awesome people,thank you so so much for h
 //share command Message 
 exports.shareMessage = () => `All you awesome people please host,share,follow and subscribe!!`;
 //subs suport the channel! Message
-exports.subtoChannelMessage = () => `All you awesome people please host,share,follow and subscribe!!`;
+exports.subtoChannelMessage = () => `While subbing is always optional, it's a great way to support the stream ! https://www.twitch.tv/jimmytaenaka/subscribe`;
 //==================================================================
 //Botowner commands
 //!heyhey 
