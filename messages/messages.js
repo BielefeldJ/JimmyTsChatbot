@@ -45,7 +45,7 @@ exports.boogieMsg = () => `♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o
 //!efe
 exports.efeMsg = () => `Everybody follow everybody. Let's build this community!!`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !dance,!socials, !discord, !times, !boogie, !efe`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !dance, !socials, !discord, !times, !boogie, !efe`;
 //==================================================================
 //Mod and VIP commands
 //!so
@@ -67,7 +67,7 @@ exports.shareMsg = () => `All you awesome people please host,share,follow and su
 //!sub suport the channel! Message
 exports.subMsg = () => `While subbing is always optional, it's a great way to support the stream ! https://www.twitch.tv/jimmytaenaka/subscribe`;
 //!prime command Message
-exports.primeMsg = () => `Ff you have Amazon Prime, you automatically have Twitch Prime and can subscribe for FREE! Sign in with your Amazon account here: https://twitch.amazon.com/tp 🙏`;
+exports.primeMsg = () => `If you have Amazon Prime, you automatically have Twitch Prime and can subscribe for FREE! Sign in with your Amazon account here: https://twitch.amazon.com/tp 🙏`;
 //==================================================================
 //Botowner commands
 //!heyhey 
