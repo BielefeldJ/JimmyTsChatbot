@@ -45,7 +45,7 @@ exports.boogieMsg = () => `♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o
 //!efe
 exports.efeMsg = () => `Everybody follow everybody. Let's build this community!!`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !socials, !discord, !times, !boogie, !efe`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !dance,!socials, !discord, !times, !boogie, !efe`;
 //==================================================================
 //Mod and VIP commands
 //!so

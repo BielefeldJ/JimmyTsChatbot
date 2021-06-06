@@ -23,6 +23,7 @@ Command | Cescription | Usage
 `!favsong` | Did you know? this is Jimmys favorite song | `!favsong`
 `!love` | shows a lot of love in chat | `!love`
 `!heart` | shows a heart in chat | `!heart`
+`!dance` | dancing people in chat \o/ | `!dance`
 `!discord` | shows discord invite link | `!discord`
 `!socials` | shows all social links | `!socials`
 `!times` | shows Jimmys stream times | `!times`
