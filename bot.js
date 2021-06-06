@@ -177,6 +177,11 @@ function onMessageHandler (target, user, msg, self) {
 			client.say(target,messages.subMsg());
 			return;
 		}
+		else if(commandName === 'prime')
+		{
+			client.say(target,messages.primeMsg());
+			return;
+		}
 	}
 
 	// User commands

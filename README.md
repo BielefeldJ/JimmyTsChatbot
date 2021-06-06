@@ -41,6 +41,7 @@ Command | Description | Usage
 `!awesome` | You are awesome \o/ | `!awesome`
 `!share` | writes a please share this channel Message | `!share`
 `!sub` | writes a please sub Message | `!sub`
+`!prime` | gives the twitch gaming hint | `!prime`
 
 How to run
 -------------

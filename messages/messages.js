@@ -66,6 +66,8 @@ exports.awesomMsg = () => `All you awesome people,thank you so so much for hangi
 exports.shareMsg = () => `All you awesome people please host,share,follow and subscribe!!`;
 //!sub suport the channel! Message
 exports.subMsg = () => `While subbing is always optional, it's a great way to support the stream ! https://www.twitch.tv/jimmytaenaka/subscribe`;
+//!prime command Message
+exports.primeMsg = () => `Ff you have Amazon Prime, you automatically have Twitch Prime and can subscribe for FREE! Sign in with your Amazon account here: https://twitch.amazon.com/tp 🙏`;
 //==================================================================
 //Botowner commands
 //!heyhey 
