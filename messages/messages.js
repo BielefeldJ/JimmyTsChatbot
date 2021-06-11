@@ -39,7 +39,7 @@ exports.socialsMsg = () => `Please check out Jimmy on his social accounts: ⠀�
 //!discord
 exports.discordMsg = () => `Join Jimmy on Discord: https://discord.gg/DxmkSgPKCF`;
 //!times
-exports.timesMsg = () => `Jimmy usaly streams on Sunday, Tuesday and Thursday at 21:00 SGT (GMT+8)`;
+exports.timesMsg = () => `Jimmy usually streams on Sunday, Tuesday and Thursday at 21:00 SGT (GMT+8)`;
 //!boogie
 exports.boogieMsg = () => `♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o･)┛♪`;
 //!efe
