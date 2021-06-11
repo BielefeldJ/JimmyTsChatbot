@@ -20,6 +20,9 @@ const counters ={
 	fsc : favsongcounter
 };
 
+//ignore the bots and jimmy
+var greeted = ['streamelements', 'streamlabs', 'jimmytaenaka'];
+
 //use logfiles
 var access = fs.createWriteStream('access.log')
 	  , error = fs.createWriteStream('error.log');
@@ -30,7 +33,7 @@ proc.stderr.write = error.write.bind(error);
 
 
 // Valid commands start with !
-let commandPrefix = '!';
+const commandPrefix = '!';
 
 
 // Create a client with our options
@@ -54,6 +57,14 @@ client.connect();
 // Called every time a message comes in. Handler for all commands
 function onMessageHandler (target, user, msg, self) {
 	if (self) { return; } // Ignore messages from the bot
+
+	if (!greeted.includes(user.username))
+	{
+		client.say(target,messages.getGreeting(user)).then((data) => {
+			greeted.push(user.username);
+		});
+		
+	}
 
 	// This isn't a command since it has no prefix:
 	if (msg.substr(0, 1) !== commandPrefix) {
@@ -343,6 +354,7 @@ schedule.scheduleJob('0 4 * * *', () => {
 	{
 		counters[c].resetCounter();
 	}
+	greeted = ['streamelements', 'streamlabs', 'jimmytaenaka'];
 	console.log('Triggered at 4 am. Reset all counter to 0');
 });
 

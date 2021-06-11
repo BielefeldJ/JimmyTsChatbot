@@ -76,3 +76,35 @@ exports.ping = () => `Yeeyyy Prof is here!! <3 I am still up and running :3`;
 exports.resetAllMsg = () => `All counter are not 0`;
 //!shutdown
 exports.shutdownMsg = () => `Okay Boss! <3 Bye bye o/`;
+
+//================================================================
+//Greeting messages
+const util = require('../utilities/userutil.js');
+greetings = 
+{
+	// twitchusername : greeting message
+	'iam_shamah' : 'Oh no, it\'s @iam_shamah again! Welcome back 💞',
+	'kareen86' : 'Hey, it\'s our ninja in stealth mode! Welcome @Kareen86 💞',
+	'mura_t_mulatino' : 'Mura, こんばんは. おかえりなさい!',
+	'ladyemma69' : 'Hey Emma ^-^ Good to see you again ❤️',
+	'tuinkabouter1965' : 'Welcome back @tuinkabouter1965! what\'s cooking?🍲🍲',
+	'didi_75' : 'Wiki-didi 📖 ! Welcome back ^-^ ❤️',
+	'dj_sweetz_beats' : 'Bananasan こんばんは. おかえりなさい! 🍌🍌🍌💞',
+	'profdrbielefeld' : 'Welcome young professor o/ 🖥️',
+	'salad_lee' : 'Welcome the sargeeee! @salad_lee Welcome back💞',
+	'maruoji' : 'Konnichiwa @Maruoji sannnnn! 🍪✨',
+	'lfabro13' : 'Oh shiii, it\'s Libby fabro! 🎸',
+	'zikpsychosocial123' : 'Heyy zik, what\'s up bro?',
+};
+
+exports.getGreeting = (user) =>
+{
+    if(greetings.hasOwnProperty(user.username))
+    {
+        return greetings[user.username];
+    }
+    else
+    {
+        return `Hey @${util.getDisplayName(user)}!! ♥ Welcome ^-^`;
+    }
+}
