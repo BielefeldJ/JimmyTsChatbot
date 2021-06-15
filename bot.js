@@ -68,7 +68,7 @@ function onMessageHandler (target, user, msg, self) {
 
 	// This isn't a command since it has no prefix:
 	if (msg.substr(0, 1) !== commandPrefix) {
-		console.log(`[${target} | ${user.username} | (${user['message-type']})] ${msg}`);
+		//console.log(`[${target} | ${user.username} | (${user['message-type']})] ${msg}`);
 		return;
 	}
 	
