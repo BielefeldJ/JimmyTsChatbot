@@ -46,8 +46,10 @@ exports.boogieMsg = () => `♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o
 exports.efeMsg = () => `Everybody follow everybody. Let's build this community!!`;
 //!netflix
 exports.netflixMsg = () => `Check out Glória on Netflix! https://www.netflix.com/title/81073977 Comming September 2021`;
+//!rap
+exports.rapMsg = () => `Yoyoyoyoyo It's Raptime baby!!`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !dance, !netflix,!socials, !discord, !times, !boogie, !efe, !netflix`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !rap, !dance, !netflix,!socials, !discord, !times, !boogie, !efe, !netflix`;
 //==================================================================
 //Mod and VIP commands
 //!so

@@ -299,6 +299,11 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target,messages.netflixMsg());
 		return;
 	}
+	else if (commandName === 'rap')
+	{
+		client.say(target,messages.rapMsg());
+		return;
+	}
 	else if(commandName === 'help')
 	{
 		client.say(target, messages.helpMsg());

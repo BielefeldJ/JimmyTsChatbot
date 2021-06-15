@@ -30,6 +30,7 @@ Command | Cescription | Usage
 `!boogie` | dance smiley in chat | `!boogie`
 `!efe` | pls follow everyone message | `!efe`
 `!netflix` | Shows Jimmys next Netflix show | `!netflix`
+`!rap` | It's raptime!! | `!rap`
 
 
 ### Mods ###
