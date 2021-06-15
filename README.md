@@ -29,6 +29,7 @@ Command | Cescription | Usage
 `!times` | shows Jimmys stream times | `!times`
 `!boogie` | dance smiley in chat | `!boogie`
 `!efe` | pls follow everyone message | `!efe`
+`!netflix` | Shows Jimmys next Netflix show | `!netflix`
 
 
 ### Mods ###

@@ -44,8 +44,10 @@ exports.timesMsg = () => `Jimmy usually streams on Sunday, Tuesday and Thursday 
 exports.boogieMsg = () => `♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o･)┛♪`;
 //!efe
 exports.efeMsg = () => `Everybody follow everybody. Let's build this community!!`;
+//!netflix
+exports.netflixMsg = () => `Check out Glória on Netflix! https://www.netflix.com/title/81073977 Comming September 2021`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !dance, !socials, !discord, !times, !boogie, !efe`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !dance, !netflix,!socials, !discord, !times, !boogie, !efe, !netflix`;
 //==================================================================
 //Mod and VIP commands
 //!so
