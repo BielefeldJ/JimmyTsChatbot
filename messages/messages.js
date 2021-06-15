@@ -95,6 +95,7 @@ greetings =
 	'maruoji' : 'Konnichiwa @Maruoji sannnnn! 🍪✨',
 	'lfabro13' : 'Oh shiii, it\'s Libby fabro! 🎸',
 	'zikpsychosocial123' : 'Heyy zik, what\'s up bro?',
+	'pondelinp' : 'Konnichiwa henati master!',
 };
 
 exports.getGreeting = (user) =>
