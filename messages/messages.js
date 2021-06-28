@@ -42,8 +42,6 @@ exports.discordMsg = () => `Join Jimmy on Discord: https://discord.gg/DxmkSgPKCF
 exports.timesMsg = () => `Jimmy usually streams on Sunday, Tuesday and Thursday at 21:00 SGT (GMT+8)`;
 //!boogie
 exports.boogieMsg = () => `♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o･)┛♪`;
-//!efe
-exports.efeMsg = () => `Everybody follow everybody. Let's build this community!!`;
 //!netflix
 exports.netflixMsg = () => `Check out Glória on Netflix! https://www.netflix.com/title/81073977 Comming September 2021`;
 //!rap
@@ -53,7 +51,7 @@ exports.lurkMsg = (displayname) => `@${displayname} enters lurk mode. Thank you 
 //!unlurk
 exports.unlurkMsg = () => `@${displayname} is back from lurking! Happy chatting 💞`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !efe, !lurk, !unlurk`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !lurk, !unlurk`;
 //==================================================================
 //Mod and VIP commands
 //!so

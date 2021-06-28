@@ -28,7 +28,6 @@ Command | Cescription | Usage
 `!socials` | shows all social links | `!socials`
 `!times` | shows Jimmys stream times | `!times`
 `!boogie` | dance smiley in chat | `!boogie`
-`!efe` | pls follow everyone message | `!efe`
 `!netflix` | Shows Jimmys next Netflix show | `!netflix`
 `!rap` | It's raptime!! | `!rap`
 `!lurk` | entering lurk mode | `!lurk`
