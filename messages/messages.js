@@ -74,6 +74,8 @@ exports.shareMsg = () => `All you awesome people please host,share,follow and su
 exports.subMsg = () => `While subbing is always optional, it's a great way to support the stream ! https://www.twitch.tv/jimmytaenaka/subscribe`;
 //!prime command Message
 exports.primeMsg = () => `If you have Amazon Prime, you automatically have Twitch Prime and can subscribe for FREE! Sign in with your Amazon account here: https://twitch.amazon.com/tp 🙏`;
+//!refresh
+exports.refreshMsg = () => `Welcome raiders! Please refresh the page or click the link https://www.twitch.tv/jimmytaenaka ❤️ Thank you so so much for being here with us!`;
 //==================================================================
 //Botowner commands
 //!heyhey 

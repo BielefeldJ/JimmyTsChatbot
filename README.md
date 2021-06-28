@@ -46,6 +46,7 @@ Command | Description | Usage
 `!share` | writes a please share this channel Message | `!share`
 `!sub` | writes a please sub Message | `!sub`
 `!prime` | gives the twitch gaming hint | `!prime`
+`!refresh` | welcome raiders. pls refresh | `!refresh`
 
 How to run
 -------------

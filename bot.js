@@ -193,6 +193,11 @@ function onMessageHandler (target, user, msg, self) {
 			client.say(target,messages.primeMsg());
 			return;
 		}
+		else if(commandName === 'refresh')
+		{
+			client.say(messages.refreshMsg());
+			return;
+		}
 	}
 
 	// User commands
