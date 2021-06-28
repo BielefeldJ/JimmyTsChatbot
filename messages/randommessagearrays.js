@@ -12,12 +12,14 @@ const jimmyquotes = [
 	'Damn I am smooth today',
 	'Hey, Do you have your Beats on? ',
 	'Pon is my hentai master. So much hentai.',
-	'I\'m very secure with myself',
+	'Why are you so mean???',
 	'shaboodah',
 	'dayummmmm',
 	'Whaaaaaaaaaatt!!!!!!!!!?',
 	'This reminds me of highschool!',
+	'J to the I to the M M Y',
 ]
+
 //ofc is this the last song? jeez. 
 const randomLastSongCall = [
 	'This is the last song.',
