@@ -61,7 +61,7 @@ exports.wrongUsageMsg = () => `Did Jimmy use this command again? Jeez Jimmy. Its
 exports.setCounterMsg = (counter) => `Counter set to ${counter}.`;
 exports.counterNotFoundMsg = (countername) => `Counter with name ${countername} not found`;
 //!welcome
-exports.welcomeMsg = () => `Welcome to Jimmys stream!! Remember to follow and subscribe. ❤️💞`;
+exports.welcomeMsg = () => `Welcome to Jimmys stream!! Thanks for being with us. Enjoy your stay and remember to follow! ❤️💞`;
 //!hi
 exports.hiMsg = () => `Hey hey nice to see you! Welcome to the most chill stream around!`;
 //!mods Love to mods message
