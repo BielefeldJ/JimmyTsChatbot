@@ -53,8 +53,10 @@ exports.rapMsg = () => `Yoyoyoyoyo It's Raptime baby!!`;
 exports.lurkMsg = (displayname) => `@${displayname} enters lurk mode. Thank you for being here!❤️💞`;
 //!unlurk
 exports.unlurkMsg = () => `@${displayname} is back from lurking! Happy chatting 💞`;
+//!bonk
+exports.bonkMsg = (fromuser, touser) => `${fromuser} bonked ${touser} for being mean! Why are you so mean?!?`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !lurk, !unlurk, !tissue`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !bonk, !refill, !lastsong, !favsong, !love, !heart, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !lurk, !unlurk, !tissue`;
 //==================================================================
 //Mod and VIP commands
 //!so

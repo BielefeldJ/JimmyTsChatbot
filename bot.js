@@ -327,6 +327,11 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target,messages.unlurkMsg(util.getDisplayName(user)));
 		return;
 	}
+	else if(commandName === 'bonk' && hasParameter)
+	{
+		client.say(target,messages.bonkMsg(util.getDisplayName(user),parse[1]));
+		return;
+	}
 	else if(commandName === 'help')
 	{
 		client.say(target, messages.helpMsg());

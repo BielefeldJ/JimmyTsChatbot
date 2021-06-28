@@ -33,6 +33,8 @@ Command | Cescription | Usage
 `!rap` | It's raptime!! | `!rap`
 `!lurk` | entering lurk mode | `!lurk`
 `!unlurk` | exiting lurk mode | `!unlurk`
+`!bonk` | bonk someone | `!bonk`, `!bonk @UserName`
+
 
 
 
