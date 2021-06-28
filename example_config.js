@@ -9,4 +9,6 @@ const tmiconf = {
 	]
 };
 
-module.exports = {tmiconf};
+const botowner = "Twitch username";
+
+module.exports = {tmiconf,botowner};

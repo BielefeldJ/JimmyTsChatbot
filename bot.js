@@ -83,7 +83,7 @@ function onMessageHandler (target, user, msg, self) {
 	let isBroadcaster = target.slice(1) === user.username; //check if user broadcaster by comparing current channel with the username of the sender
 	let isModUp = isMod || isBroadcaster;
 	let isVIP = util.getUserVIP(user);
-	let isBotOwner = user.username === "profdrbielefeld"; //twitch username of the botowner
+	let isBotOwner = user.username === config.botowner; //twitch username of the botowner
 
 	//used to check if the user send parameter
 	let hasParameter = typeof parse[1] !== 'undefined';
