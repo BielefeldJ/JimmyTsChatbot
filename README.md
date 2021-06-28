@@ -15,6 +15,7 @@ Command | Cescription | Usage
 `!help` | shows a list of all commands | `!help`
 `!beer` | give yourself or someone a beer | `!beer`, `!beer @UserName`
 `!tea` | give yourself or someone a tea | `!tea`, `!tea @UserName`
+`!tissue` | give yourself or someone tissues | `!tissue`, `!tissue @UserName`
 `!refill` | refill someones glass | `!refill @UserName`
 `!counter` | shows how many times Jimmy pressed the wrong button | `!counter`
 `!counter++` | increase the counter. Use only when he pressed a wrong button | `!counter++`
@@ -32,6 +33,7 @@ Command | Cescription | Usage
 `!rap` | It's raptime!! | `!rap`
 `!lurk` | entering lurk mode | `!lurk`
 `!unlurk` | exiting lurk mode | `!unlurk`
+
 
 
 ### Mods ###

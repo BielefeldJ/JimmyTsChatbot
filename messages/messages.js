@@ -32,6 +32,9 @@ exports.beerMsg = (displayname) => `Hey ${displayname}, here. Have a nice Kirinb
 //!tea
 exports.teaToUserMsg = (fromuser, touser) => `@${fromuser} pours ${touser} a nice cup of jasmine tea.`;
 exports.teaMsg = (displayname) => `@${displayname} here, have a nice cup of jasmine tea.`;
+//!tissues
+exports.tissuesToUserMag = (fromuser, touser) => `@${fromuser} noticed, that ${touser} is about to squeezed out a tear and graps a pack of tissues.`;
+exports.tissuesMsg = (displayname) => `@${displayname}, here have a pack of tissues.`;
 //!refill
 exports.refillMsg = (fromuser, touser) => `${fromuser} has noticed the empty glass, and quickly sends over the barman with a refill to ${touser}. Nobody wants to see ${touser} with an empty glass`;
 //!socials
@@ -51,7 +54,7 @@ exports.lurkMsg = (displayname) => `@${displayname} enters lurk mode. Thank you 
 //!unlurk
 exports.unlurkMsg = () => `@${displayname} is back from lurking! Happy chatting 💞`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !lurk, !unlurk`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !lurk, !unlurk, !tissue`;
 //==================================================================
 //Mod and VIP commands
 //!so

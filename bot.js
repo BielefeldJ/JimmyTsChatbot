@@ -195,7 +195,7 @@ function onMessageHandler (target, user, msg, self) {
 		}
 		else if(commandName === 'refresh')
 		{
-			client.say(messages.refreshMsg());
+			client.say(target, messages.refreshMsg());
 			return;
 		}
 	}
@@ -239,6 +239,19 @@ function onMessageHandler (target, user, msg, self) {
 		}
 		else{
 			client.say(target,messages.teaMsg(util.getDisplayName(user)));
+			return;
+		}
+	}
+	else if(commandName === 'tissue')
+	{
+		if(hasParameter)
+		{
+			client.say(target,messages.tissuesToUserMag(util.getDisplayName(user),parse[1]));
+			return;
+		}
+		else
+		{
+			client.say(target,messages.tissuesMsg(util.getDisplayName(user)));
 			return;
 		}
 	}
