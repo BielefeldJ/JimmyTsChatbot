@@ -48,8 +48,12 @@ exports.efeMsg = () => `Everybody follow everybody. Let's build this community!!
 exports.netflixMsg = () => `Check out Glória on Netflix! https://www.netflix.com/title/81073977 Comming September 2021`;
 //!rap
 exports.rapMsg = () => `Yoyoyoyoyo It's Raptime baby!!`;
+//!lurk
+exports.lurkMsg = (displayname) => `@${displayname} enters lurk mode. Thank you for being here!❤️💞`;
+//!unlurk
+exports.unlurkMsg = () => `@${displayname} is back from lurking! Happy chatting 💞`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !rap, !dance, !netflix,!socials, !discord, !times, !boogie, !efe, !netflix`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !refill, !lastsong, !favsong, !love, !heart, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !efe, !lurk, !unlurk`;
 //==================================================================
 //Mod and VIP commands
 //!so

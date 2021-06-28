@@ -304,6 +304,16 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target,messages.rapMsg());
 		return;
 	}
+	else if (commandName === 'lurk')
+	{	
+		client.say(target,messages.lurkMsg(util.getDisplayName(user)));
+		return;
+	}
+	else if(commandName === 'unlurk')
+	{
+		client.say(target,messages.unlurkMsg(util.getDisplayName(user)));
+		return;
+	}
 	else if(commandName === 'help')
 	{
 		client.say(target, messages.helpMsg());

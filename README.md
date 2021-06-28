@@ -31,6 +31,8 @@ Command | Cescription | Usage
 `!efe` | pls follow everyone message | `!efe`
 `!netflix` | Shows Jimmys next Netflix show | `!netflix`
 `!rap` | It's raptime!! | `!rap`
+`!lurk` | entering lurk mode | `!lurk`
+`!unlurk` | exiting lurk mode | `!unlurk`
 
 
 ### Mods ###
