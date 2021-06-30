@@ -8,11 +8,10 @@ const jimmyquotes = [
 	'How does that work??',
 	'@salad_lee. She is a chinese in germany or so i don\'t know. I don\'t even know if salad even is a she.',
 	'Sorry wrong button...',
-	'You are awesome!',
 	'Damn I am smooth today',
 	'Hey, Do you have your Beats on? ',
 	'Pon is my hentai master. So much hentai.',
-	'Why are you so mean???',
+	'Kareen, why are you so mean???',
 	'shaboodah',
 	'dayummmmm',
 	'Whaaaaaaaaaatt!!!!!!!!!?',
@@ -43,6 +42,18 @@ function getRandomJimmyQuote(){
     return jimmyquotes[Math.floor(Math.random() * jimmyquotes.length)];
 }
 
+//returns a quote based on given index
+function getJimmyQuoteByIndex(index)
+{
+	if(index < jimmyquotes.length)
+	{
+		return jimmyquotes[index];
+	}
+	else
+	{
+		return getRandomJimmyQuote();
+	}
+}
 
 //returns one random item of the randomLastSongCall array
 function getRandomLastSongCall(){
@@ -58,5 +69,6 @@ function getFavSongCall()
 module.exports = {
     getRandomJimmyQuote,
     getRandomLastSongCall,
-	getFavSongCall
+	getFavSongCall,
+	getJimmyQuoteByIndex
 };

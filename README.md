@@ -19,7 +19,7 @@ Command | Cescription | Usage
 `!refill` | refill someones glass | `!refill @UserName`
 `!counter` | shows how many times Jimmy pressed the wrong button | `!counter`
 `!counter++` | increase the counter. Use only when he pressed a wrong button | `!counter++`
-`!quote` | shows one of many famous quotes from Jimmy | `!quote`
+`!quote` | shows one of many famous quotes from Jimmy | `!quote` , `!quote 1`
 `!lastsong` | Yes this really is the last song! | `!lastsong`
 `!favsong` | Did you know? this is Jimmys favorite song | `!favsong`
 `!love` | shows a lot of love in chat | `!love`

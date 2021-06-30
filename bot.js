@@ -214,7 +214,14 @@ function onMessageHandler (target, user, msg, self) {
 	}
 	else if(commandName === 'quote')
 	{
-		client.say(target, randomanswers.getRandomJimmyQuote());
+		if(hasParameter)
+		{
+			client.say(target, randomanswers.getJimmyQuoteByIndex(parse[1]));
+		}
+		else
+		{
+			client.say(target, randomanswers.getRandomJimmyQuote());
+		}		
 		return;
 	}
 	else if(commandName === 'beer')
