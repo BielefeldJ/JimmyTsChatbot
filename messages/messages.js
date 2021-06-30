@@ -70,7 +70,7 @@ exports.welcomeMsg = () => `Welcome to Jimmys stream!! Thanks for being with us.
 //!hi
 exports.hiMsg = () => `Hey hey nice to see you! Welcome to the most chill stream around!`;
 //!mods Love to mods message
-exports.modsMsg = () => `Shout out to my mods!!! They are super cool!!`;
+exports.modsMsg = () => `❤️💞❤️💞❤️💞❤️💞❤️💞❤️💞Shout out to my mods @tuinkabouter1965, @salad_lee and @ProfDrBielefeld!!! They are super cool!!❤️💞❤️💞❤️💞❤️💞❤️💞❤️💞`;
 //!awesom Message
 exports.awesomMsg = () => `All you awesome people,thank you so so much for hanging out with us!`;
 //!share command Message 

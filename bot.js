@@ -168,7 +168,7 @@ function onMessageHandler (target, user, msg, self) {
 			client.say(target,messages.hiMsg());
 			return;
 		}
-		else if(commandName === 'mods')
+		else if(commandName === 'modlove')
 		{
 			client.say(target,messages.modsMsg());
 			return;
