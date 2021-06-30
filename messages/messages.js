@@ -81,6 +81,9 @@ exports.subMsg = () => `While subbing is always optional, it's a great way to su
 exports.primeMsg = () => `If you have Amazon Prime, you automatically have Twitch Prime and can subscribe for FREE! Sign in with your Amazon account here: https://twitch.amazon.com/tp 🙏`;
 //!refresh
 exports.refreshMsg = () => `Welcome raiders! Please refresh the page or click the link https://www.twitch.tv/jimmytaenaka ❤️ Thank you so so much for being here with us!`;
+//Messages for the stage
+//stage wrong usage
+exports.stagewrong = () => `Send someone to a Stage. use !stage <1-9> <@user>`;
 //==================================================================
 //Botowner commands
 //!heyhey 

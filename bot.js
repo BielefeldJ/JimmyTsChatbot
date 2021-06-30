@@ -23,13 +23,16 @@ const counters ={
 //ignore the bots and jimmy
 var greeted = ['streamelements', 'streamlabs', 'jimmytaenaka'];
 
+//init stage
+var stages = ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'];
+
 //use logfiles
 var access = fs.createWriteStream('access.log')
 	  , error = fs.createWriteStream('error.log');
 
 // redirect stdout / stderr
-proc.stdout.write = access.write.bind(access);
-proc.stderr.write = error.write.bind(error); 
+//proc.stdout.write = access.write.bind(access);
+//proc.stderr.write = error.write.bind(error); 
 
 
 // Valid commands start with !
@@ -112,8 +115,7 @@ function onMessageHandler (target, user, msg, self) {
 		{
 			client.say(target,messages.shutdownMsg());			
 			proc.exit();			
-		}
-		
+		}		
 	}
 
 	//Mod and VIP commands
@@ -196,6 +198,32 @@ function onMessageHandler (target, user, msg, self) {
 		else if(commandName === 'refresh')
 		{
 			client.say(target, messages.refreshMsg());
+			return;
+		}
+		else if (commandName === 'stage')
+		{			
+			if (hasParameter && hasSecondParameter)
+			{
+				let stagenumber = parseInt(parse[1]);
+				let stageuser = parse[2];
+
+				if(Number.isInteger(stagenumber) && stagenumber-1 < stages.length)
+				{
+					if(stages[stagenumber-1] === 'empty')
+					{					
+						client.say(target,randomanswers.getRandomOnStageMessage(stageuser,stagenumber));
+						stages[stagenumber-1] = stageuser;
+						return;
+					}
+					else
+					{
+						client.say(target,randomanswers.getRandomOffStageMessage(stages[stagenumber-1],stagenumber) + "  " +randomanswers.getRandomOnStageMessage(stageuser,stagenumber));
+						stages[stagenumber-1] = stageuser;
+						return;
+					}					
+				}
+			}
+			client.say(target,messages.stagewrong());
 			return;
 		}
 	}
@@ -409,7 +437,8 @@ schedule.scheduleJob('0 4 * * *', () => {
 	{
 		counters[c].resetCounter();
 	}
-	greeted = ['streamelements', 'streamlabs', 'jimmytaenaka'];
+	greeted = ['streamelements', 'streamlabs', 'jimmytaenaka']; //reset greetings
+	stages = ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty']; //reset stages
 	console.log('Triggered at 4 am. Reset all counter to 0');
 });
 

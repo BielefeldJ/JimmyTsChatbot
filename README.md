@@ -53,6 +53,7 @@ Command | Description | Usage
 `!sub` | writes a please sub Message | `!sub`
 `!prime` | gives the twitch gaming hint | `!prime`
 `!refresh` | welcome raiders. pls refresh | `!refresh`
+`!stage` | send someone on stage | `!stage <1-9> <@user>`
 
 How to run
 -------------
