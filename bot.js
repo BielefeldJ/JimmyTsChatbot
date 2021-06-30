@@ -276,6 +276,16 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target, textimages.heart);
 		return;
 	}
+	else if(commandName === 'hu')
+	{
+		client.say(target,textimages.hu);
+		return;
+	}
+	else if(commandName === 'wow')
+	{
+		client.say(target,textimages.wow);
+		return;
+	}
 	else if(commandName === 'dance')
 	{
 		client.say(target,textimages.dance);

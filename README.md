@@ -24,6 +24,8 @@ Command | Cescription | Usage
 `!favsong` | Did you know? this is Jimmys favorite song | `!favsong`
 `!love` | shows a lot of love in chat | `!love`
 `!heart` | shows a heart in chat | `!heart`
+`!wow` | shows a wow face | `!wow`
+`!hu` | Hands up! | `!hu`
 `!dance` | dancing people in chat \o/ | `!dance`
 `!discord` | shows discord invite link | `!discord`
 `!socials` | shows all social links | `!socials`
@@ -33,7 +35,7 @@ Command | Cescription | Usage
 `!rap` | It's raptime!! | `!rap`
 `!lurk` | entering lurk mode | `!lurk`
 `!unlurk` | exiting lurk mode | `!unlurk`
-`!bonk` | bonk someone | `!bonk`, `!bonk @UserName`
+`!bonk` | bonk someone for being mean | `!bonk`, `!bonk @UserName`
 
 
 
