@@ -31,8 +31,8 @@ var access = fs.createWriteStream('access.log')
 	  , error = fs.createWriteStream('error.log');
 
 // redirect stdout / stderr
-//proc.stdout.write = access.write.bind(access);
-//proc.stderr.write = error.write.bind(error); 
+proc.stdout.write = access.write.bind(access);
+proc.stderr.write = error.write.bind(error); 
 
 
 // Valid commands start with !
