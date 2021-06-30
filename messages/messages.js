@@ -108,9 +108,13 @@ greetings =
 	'maruoji' : 'Konnichiwa @Maruoji sannnnn! 🍪✨',
 	'lfabro13' : 'Oh shiii, it\'s Libby fabro! 🎸',
 	'zikpsychosocial123' : 'Heyy zik, what\'s up bro?',
-	'pondelinp' : 'Konnichiwa henati master!',
+	'pondelinp' : 'Konnichiwa henati master!🐙🐙🐙',
 	'theneokelelims' : 'Welcome our favorite ukulele duo!! 💖',
 	'umarekawaru_' : 'Hey bro, how many you drank today? 🥃🍺',
+	'jenni_irys8' : 'Hey Jenni, ready for some baby making music? 🤣👶',
+	'inkedcheffitness' : 'Inkcheffffffffffff fitnessss heyyyy!! ❤️‍🔥',
+	'jdonutchan' : 'Welcome nephew! We in VR space again? 🌌🌌',
+
 };
 
 exports.getGreeting = (user) =>
