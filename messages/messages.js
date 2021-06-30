@@ -52,7 +52,7 @@ exports.rapMsg = () => `Yoyoyoyoyo It's Raptime baby!!`;
 //!lurk
 exports.lurkMsg = (displayname) => `@${displayname} enters lurk mode. Thank you for being here!❤️💞`;
 //!unlurk
-exports.unlurkMsg = () => `@${displayname} is back from lurking! Happy chatting 💞`;
+exports.unlurkMsg = (displayname) => `@${displayname} is back from lurking! Happy chatting 💞`;
 //!bonk
 exports.bonkMsg = (fromuser, touser) => `${fromuser} bonked ${touser} for being mean! Why are you so mean?!?`;
 //!help
