@@ -9,6 +9,10 @@ const tmiconf = {
 	]
 };
 
+//set the owner/admin of the bot
 const botowner = "Twitch username";
 
-module.exports = {tmiconf,botowner};
+//enable greetings. If true, the bot will greet new user who joins the chat
+const greetings = true;//true or false
+
+module.exports = {tmiconf,botowner,greetings};

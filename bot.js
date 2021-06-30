@@ -58,7 +58,7 @@ client.connect();
 function onMessageHandler (target, user, msg, self) {
 	if (self) { return; } // Ignore messages from the bot
 
-	if (!greeted.includes(user.username))
+	if (config.greetings && !greeted.includes(user.username))
 	{
 		client.say(target,messages.getGreeting(user)).then((data) => {
 			greeted.push(user.username);
