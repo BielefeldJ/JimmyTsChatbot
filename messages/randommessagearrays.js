@@ -68,8 +68,7 @@ const onStageMessage = [
 	'{user} get your ass on stage {index}',
 	'Security, please clear the way to stage {index}. {user}, please hurry up.',
 	'Stage {index} is waiting for {user}. Hurry!',
-	'Stage {index} stage {index} please. Get ready for {user}',
-
+	'Stage {index} Stage {index} please. Get ready for {user}',
 ]
 const offStageMessage = [
 	'{user} get your ass off stage {index}',
@@ -80,12 +79,12 @@ const offStageMessage = [
 
 function getRandomOnStageMessage(user,stagenumber)
 {
-	return onStageMessage[Math.floor(Math.random() * onStageMessage.length)].replace('{user}',user).replace('{index}', stagenumber);
+	return onStageMessage[Math.floor(Math.random() * onStageMessage.length)].replace(/{user}/g,user).replace(/{index}/g, stagenumber);
 }
 
 function getRandomOffStageMessage(user,stagenumber)
 {
-	return offStageMessage[Math.floor(Math.random() * offStageMessage.length)].replace('{user}',user).replace('{index}', stagenumber);
+	return offStageMessage[Math.floor(Math.random() * offStageMessage.length)].replace(/{user}/g,user).replace(/{index}/g, stagenumber);
 }
 
 

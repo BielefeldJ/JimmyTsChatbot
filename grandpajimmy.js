@@ -222,7 +222,8 @@ function onMessageHandler (target, user, msg, self) {
 					}
 					else
 					{
-						client.say(target,randomanswers.getRandomOffStageMessage(stages[stagenumber-1],stagenumber) + "  " +randomanswers.getRandomOnStageMessage(stageuser,stagenumber));
+						client.say(target,randomanswers.getRandomOffStageMessage(stages[stagenumber-1],stagenumber) + " - " 
+						+ randomanswers.getRandomOnStageMessage(stageuser,stagenumber));
 						stages[stagenumber-1] = stageuser;
 						return;
 					}					
