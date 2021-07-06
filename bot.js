@@ -68,7 +68,12 @@ function onMessageHandler (target, user, msg, self) {
 		});
 		
 	}
-
+	//If someone hits reply in the chat, the chat will automaticly add the targeted user as first word, starting with an @
+	//If this is the case, remove the first word to check if the user used a command while using the reply feature.
+	if(msg.substr(0,1) === '@')
+    {
+        msg = msg.substr(msg.indexOf(" ") + 1);
+    }
 	// This isn't a command since it has no prefix:
 	if (msg.substr(0, 1) !== commandPrefix) {
 		//console.log(`[${target} | ${user.username} | (${user['message-type']})] ${msg}`);
