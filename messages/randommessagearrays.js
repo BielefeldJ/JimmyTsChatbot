@@ -11,7 +11,7 @@ const jimmyquotes = [
 	'Damn I am smooth today',
 	'Hey, Do you have your Beats on? ',
 	'Pon is my hentai master. So much hentai.',
-	'Kareen, why are you so mean???',
+	'No way, why are you so mean to me?',
 	'shaboodah',
 	'dayummmmm',
 	'Whaaaaaaaaaatt!!!!!!!!!?',
