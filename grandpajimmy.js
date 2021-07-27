@@ -128,17 +128,8 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		if(commandName === 'so' && hasParameter) //shoutout someone
 		{
-			if(hasSecondParameter && typeof parse[3] !== 'undefined') //Someone used the !so command wrong
-			{
-				client.say(target,messages.wrongUsageMsg());
-				return;
-			}
-			else
-			{
-				client.say(target,messages.shoutoutMsg(parse[1]));		
-				return;
-			}
-
+			client.say(target,messages.shoutoutMsg(parse[1]));		
+			return;		
 		}
 		//DEFAULT set the wrong button counter to a value given as parameter
 		//If a specific counter is fiven, sets it a value (first parameter is the counter name in countersarray seccond the new value)
