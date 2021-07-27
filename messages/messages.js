@@ -117,6 +117,7 @@ greetings =
 	'jenni_irys8' : 'Hey Jenni, ready for some baby making music? 🤣👶',
 	'inkedcheffitness' : 'Inkcheffffffffffff fitnessss heyyyy!! ❤️‍🔥',
 	'jdonutchan' : 'Welcome nephew! We in VR space again? 🌌🌌',
+	'stefyysoh' : 'Stefyyyyyy welcome back!❤️ did your phone fall on ur face again?'
 
 };
 
