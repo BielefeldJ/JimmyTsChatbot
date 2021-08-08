@@ -17,6 +17,7 @@ const jimmyquotes = [
 	'Whaaaaaaaaaatt!!!!!!!!!?',
 	'This reminds me of highschool!',
 	'J to the I to the M M Y',
+	'That was sooo gooood!',
 ]
 //returns one random item of Jimmys quotes
 function getRandomJimmyQuote(){
