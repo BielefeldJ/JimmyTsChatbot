@@ -18,6 +18,7 @@ const jimmyquotes = [
 	'This reminds me of highschool!',
 	'J to the I to the M M Y',
 	'That was sooo gooood!',
+	'My Chinese mother tongue is Japanese',
 ]
 //returns one random item of Jimmys quotes
 function getRandomJimmyQuote(){
