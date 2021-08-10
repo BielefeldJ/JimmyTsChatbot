@@ -117,8 +117,8 @@ greetings =
 	'jenni_irys8' : 'Hey Jenni, ready for some baby making music? 🤣👶',
 	'inkedcheffitness' : 'Inkcheffffffffffff fitnessss heyyyy!! ❤️‍🔥',
 	'jdonutchan' : 'Welcome nephew! We in VR space again? 🌌🌌',
-	'shinyoungjistefy' : 'Stefyyyyyy welcome back!❤️ did your phone fall on ur face again?',
-	'metarki' : '"@Metarki 💞 Velkommen tilbage! Are you wearing your dream dress today? 👗🍸',
+	'shinyoungjistefy' : 'Stefyyyyyy welcome back!❤️ did your phone fall on ur face again?', 
+	'metarki' : '@Metarki 💞 Velkommen tilbage! Are you wearing your dream dress today? 👗🍸',
 	'wanderlustlena' : 'Oii ya still here? Welcome 💞❤️',
 	'mrgaijin2020' : '🚨🚨🚑🚑 MrWeirdo2020 is back 🚑🚑🚨🚨'
 };
