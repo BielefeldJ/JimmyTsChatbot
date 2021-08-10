@@ -36,6 +36,8 @@ Command | Cescription | Usage
 `!lurk` | entering lurk mode | `!lurk`
 `!unlurk` | exiting lurk mode | `!unlurk`
 `!bonk` | bonk someone for being mean | `!bonk`, `!bonk @UserName`
+`!weather` | shows the current weather at the given location | `!weather Berlin`
+
 
 
 
@@ -72,4 +74,5 @@ List of requirements
 * fs
 * process
 * nodejs
+* https
     
