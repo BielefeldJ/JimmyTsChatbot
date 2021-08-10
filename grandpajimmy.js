@@ -42,6 +42,7 @@ const commandPrefix = '!';
 // Create a client with our options
 const client = new tmi.client(config.tmiconf);
 
+
 // Register  event handlers (defined below)
 client.on('message', onMessageHandler);
 client.on('connected', onConnectedHandler);
@@ -76,7 +77,6 @@ function onMessageHandler (target, user, msg, self) {
     }
 	// This isn't a command since it has no prefix:
 	if (msg.substr(0, 1) !== commandPrefix) {
-		//console.log(`[${target} | ${user.username} | (${user['message-type']})] ${msg}`);
 		return;
 	}
 	
@@ -84,6 +84,9 @@ function onMessageHandler (target, user, msg, self) {
 	const parse = msg.slice(1).split(' ');
 	// The command name is the first (0th) one:
 	const commandName = parse[0].toLowerCase();
+
+	//remove the command name from the array
+	parse.slice(1);
 
 
 	//Used to check if a user is a mod or not
@@ -94,8 +97,8 @@ function onMessageHandler (target, user, msg, self) {
 	let isBotOwner = user.username === config.botowner; //twitch username of the botowner
 
 	//used to check if the user send parameter
-	let hasParameter = typeof parse[1] !== 'undefined';
-	let hasSecondParameter = typeof parse[2] !== 'undefined';
+	let hasParameter = typeof parse[0] !== 'undefined';
+	let hasSecondParameter = typeof parse[1] !== 'undefined';
 
 	console.log(`[${target} | ${user.username} | (${user['message-type']})] ${commandName} receved as command!`);
 
@@ -128,7 +131,7 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		if(commandName === 'so' && hasParameter) //shoutout someone
 		{
-			client.say(target,messages.shoutoutMsg(parse[1]));		
+			client.say(target,messages.shoutoutMsg(parse[0]));		
 			return;		
 		}
 		//DEFAULT set the wrong button counter to a value given as parameter
@@ -137,21 +140,21 @@ function onMessageHandler (target, user, msg, self) {
 		{
 			if(hasSecondParameter)
 			{
-				if(parse[1] in counters)
+				if(parse[0] in counters)
 				{
-					counters[parse[1]].setCounter = parseInt(parse[2]);
-					client.say(target,messages.setCounterMsg(counters[parse[1]].getCounter));
+					counters[parse[0]].setCounter = parseInt(parse[1]);
+					client.say(target,messages.setCounterMsg(counters[parse[0]].getCounter));
 					return;
 				}
 				else
 				{
-					client.say(target,messages.counterNotFoundMsg(parse[1]));
+					client.say(target,messages.counterNotFoundMsg(parse[0]));
 					return;
 				}
 			}
 			else 
 			{			
-				wrongbuttoncounter.setCounter = parseInt(parse[1]);
+				wrongbuttoncounter.setCounter = parseInt(parse[0]);
 				client.say(target,messages.setCounterMsg(wrongbuttoncounter.getCounter));
 				return;
 			}
@@ -200,8 +203,8 @@ function onMessageHandler (target, user, msg, self) {
 		{			
 			if (hasParameter && hasSecondParameter)
 			{
-				let stagenumber = parseInt(parse[1]);
-				let stageuser = parse[2];
+				let stagenumber = parseInt(parse[0]);
+				let stageuser = parse[1];
 
 				if(Number.isInteger(stagenumber) && stagenumber-1 < stages.length)
 				{
@@ -241,7 +244,7 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		if(hasParameter)
 		{
-			client.say(target, randomanswers.getJimmyQuoteByIndex(parse[1]));
+			client.say(target, randomanswers.getJimmyQuoteByIndex(parse[0]));
 		}
 		else
 		{
@@ -253,7 +256,7 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		if(hasParameter)
 		{
-			client.say(target,messages.beerToUserMsg(util.getDisplayName(user),parse[1]));
+			client.say(target,messages.beerToUserMsg(util.getDisplayName(user),parse[0]));
 			return;
 		}
 		else
@@ -266,7 +269,7 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		if(hasParameter)
 		{
-			client.say(target,messages.teaToUserMsg(util.getDisplayName(user),parse[1]));
+			client.say(target,messages.teaToUserMsg(util.getDisplayName(user),parse[0]));
 			return;
 		}
 		else{
@@ -278,7 +281,7 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		if(hasParameter)
 		{
-			client.say(target,messages.tissuesToUserMag(util.getDisplayName(user),parse[1]));
+			client.say(target,messages.tissuesToUserMag(util.getDisplayName(user),parse[0]));
 			return;
 		}
 		else
@@ -289,7 +292,7 @@ function onMessageHandler (target, user, msg, self) {
 	}
 	else if(commandName === 'refill' && hasParameter)
 	{
-		client.say(target,messages.refillMsg(util.getDisplayName(user),parse[1]));
+		client.say(target,messages.refillMsg(util.getDisplayName(user),parse[0]));
 		return;
 	}
 	else if(commandName === 'lastsong')
@@ -371,7 +374,7 @@ function onMessageHandler (target, user, msg, self) {
 	}
 	else if(commandName === 'bonk' && hasParameter)
 	{
-		client.say(target,messages.bonkMsg(util.getDisplayName(user),parse[1]));
+		client.say(target,messages.bonkMsg(util.getDisplayName(user),parse[0]));
 		return;
 	}
 	else if(commandName === 'help')
