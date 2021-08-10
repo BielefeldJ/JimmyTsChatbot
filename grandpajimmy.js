@@ -8,6 +8,7 @@ const randomanswers = require('./messages/randommessagearrays.js');
 const messages = require('./messages/messages.js')
 const textimages = require('./messages/textimages.js');
 const util = require('./utilities/userutil.js');
+const Weather = require('./utilities/weather.js');
 
 //logging
 if(config.LOGGING.enable)
@@ -57,6 +58,10 @@ var greeted = ['streamelements', 'streamlabs', 'jimmytaenaka'];
 //init stage
 var stages = ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'];
 
+//Init Weather Module
+Weather.setAPIKEY(config.OPENWEATHER_API_KEY);
+Weather.client(client);
+
 //start handler
 // Called every time a message comes in. Handler for all commands
 function onMessageHandler (target, user, msg, self) {
@@ -87,7 +92,6 @@ function onMessageHandler (target, user, msg, self) {
 
 	//remove the command name from the array
 	parse = parse.slice(1);
-
 
 	//Used to check if a user is a mod or not
 	let isMod = user.mod || user['user-type'] === 'mod';
@@ -376,6 +380,10 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		client.say(target,messages.bonkMsg(util.getDisplayName(user),parse[0]));
 		return;
+	}
+	else if(commandName === 'weather' && hasParameter)
+	{
+		Weather.sendCurrentToChat(target,parse.join(' '));
 	}
 	else if(commandName === 'help')
 	{

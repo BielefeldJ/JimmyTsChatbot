@@ -21,5 +21,7 @@ LOGGING.enable = true; //true = logging to file; false = logging on console
 LOGGING.logfile = ""; //log file
 LOGGING.errlogfile = ""; //error log file
 
+//API key for open weather map
+const OPENWEATHER_API_KEY = '';
 
 module.exports = {tmiconf,botowner,greetings,OPENWEATHER_API_KEY};
