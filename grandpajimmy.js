@@ -9,11 +9,16 @@ const messages = require('./messages/messages.js')
 const textimages = require('./messages/textimages.js');
 const util = require('./utilities/userutil.js');
 
-//use logfiles
-var access = fs.createWriteStream('access.log') , error = fs.createWriteStream('error.log');
-// redirect stdout / stderr
-proc.stdout.write = access.write.bind(access);
-proc.stderr.write = error.write.bind(error); 
+//logging
+if(config.LOGGING.enable)
+{
+	//use logfiles
+	var access = fs.createWriteStream(config.LOGGING.logfile);
+	var error = fs.createWriteStream(config.LOGGING.errlogfile);
+	// redirect stdout / stderr
+	proc.stdout.write = access.write.bind(access);
+	proc.stderr.write = error.write.bind(error); 
+}
 
 // Valid commands start with !
 const commandPrefix = '!';
@@ -76,7 +81,7 @@ function onMessageHandler (target, user, msg, self) {
 	}
 	
 	// Split the message into individual words:
-	const parse = msg.slice(1).split(' ');
+	let parse = msg.slice(1).split(' ');
 	// The command name is the first (0th) one:
 	const commandName = parse[0].toLowerCase();
 
