@@ -81,7 +81,7 @@ function onMessageHandler (target, user, msg, self) {
 	const commandName = parse[0].toLowerCase();
 
 	//remove the command name from the array
-	parse.slice(1);
+	parse = parse.slice(1);
 
 
 	//Used to check if a user is a mod or not
