@@ -9,39 +9,18 @@ const messages = require('./messages/messages.js')
 const textimages = require('./messages/textimages.js');
 const util = require('./utilities/userutil.js');
 
-//init counter
-const wrongbuttoncounter = new Counter();
-const lastsongcounter = new Counter();
-const favsongcounter = new Counter();
-
-const counters ={
-	wbc : wrongbuttoncounter,
-	lsc : lastsongcounter,
-	fsc : favsongcounter
-};
-
-//ignore the bots and jimmy
-var greeted = ['streamelements', 'streamlabs', 'jimmytaenaka'];
-
-//init stage
-var stages = ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'];
-
 //use logfiles
-var access = fs.createWriteStream('access.log')
-	  , error = fs.createWriteStream('error.log');
-
+var access = fs.createWriteStream('access.log') , error = fs.createWriteStream('error.log');
 // redirect stdout / stderr
 proc.stdout.write = access.write.bind(access);
 proc.stderr.write = error.write.bind(error); 
 
-
 // Valid commands start with !
 const commandPrefix = '!';
 
-
+//init chat client
 // Create a client with our options
 const client = new tmi.client(config.tmiconf);
-
 
 // Register  event handlers (defined below)
 client.on('message', onMessageHandler);
@@ -54,10 +33,26 @@ client.on('resub', onResubHandler);
 client.on('subgift', onSubgiftHandler);
 client.on('submysterygift', onRandomSubgiftHandler);
 
-
 // Connect to Twitch:
 client.connect();
 
+//init counter
+const wrongbuttoncounter = new Counter();
+const lastsongcounter = new Counter();
+const favsongcounter = new Counter();
+const counters ={
+	wbc : wrongbuttoncounter,
+	lsc : lastsongcounter,
+	fsc : favsongcounter
+};
+
+//ignore list for greeting function
+var greeted = ['streamelements', 'streamlabs', 'jimmytaenaka'];
+
+//init stage
+var stages = ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'];
+
+//start handler
 // Called every time a message comes in. Handler for all commands
 function onMessageHandler (target, user, msg, self) {
 	if (self) { return; } // Ignore messages from the bot
@@ -430,6 +425,8 @@ function onRandomSubgiftHandler(target, username, numbOfSubs, methods, user)
 {
 	client.say(target,messages.communityGiftsubMessage(util.getDisplayName(user),numbOfSubs,util.getSenderGiftCount(user)));
 }
+//end handler
+
 
 //runns every day at 4:00 in the morning to reset all counter for the next stream
 schedule.scheduleJob('0 4 * * *', () => { 
