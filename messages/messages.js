@@ -55,8 +55,10 @@ exports.lurkMsg = (displayname) => `@${displayname} enters lurk mode. Thank you 
 exports.unlurkMsg = (displayname) => `@${displayname} is back from lurking! Happy chatting 💞`;
 //!bonk
 exports.bonkMsg = (fromuser, touser) => `${fromuser} bonked ${touser} for being mean! Why are you so mean?!?`;
+//!raidcall
+exports.raidcallMsg = () => `TombRaid twitchRaid TombRaid twitchRaid You have been raided by the SHABOODA fam! TombRaid twitchRaid TombRaid twitchRaid`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !bonk, !refill, !lastsong, !favsong, !love, !heart, !hu, !wow, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !lurk, !unlurk, !tissue`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !bonk, !refill, !lastsong, !favsong, !love, !heart, !hu, !wow, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !lurk, !unlurk, !tissue, !raidcall`;
 //==================================================================
 //Mod and VIP commands
 //!so

@@ -384,6 +384,12 @@ function onMessageHandler (target, user, msg, self) {
 	else if(commandName === 'weather' && hasParameter)
 	{
 		Weather.sendCurrentToChat(target,parse.join(' '));
+		return;
+	}
+	else if(commandName === 'raidcall')
+	{
+		client.say(target,messages.raidcallMsg());
+		return;
 	}
 	else if(commandName === 'help')
 	{

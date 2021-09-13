@@ -37,6 +37,7 @@ Command | Cescription | Usage
 `!unlurk` | exiting lurk mode | `!unlurk`
 `!bonk` | bonk someone for being mean | `!bonk`, `!bonk @UserName`
 `!weather` | shows the current weather at the given location | `!weather Berlin`
+`!raidcall` | shows the raidcall in chat | `!raidcall`
 
 
 
