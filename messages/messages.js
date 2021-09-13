@@ -106,7 +106,7 @@ greetings =
 	'tuinkabouter1965' : 'Welcome back @tuinkabouter1965! what\'s cooking?🍲🍲',
 	'didi_75' : 'Wiki-didi 📖 ! Welcome back ^-^ ❤️',
 	'dj_sweetz_beats' : 'Bananasan こんばんは. おかえりなさい! 🍌🍌🍌💞',
-	'profdrbielefeld' : 'Welcome young professor o/ 🖥️',
+	'profbielefeld' : 'Welcome young professor o/ 🖥️',
 	'salad_lee' : 'Welcome the sargeeee! @salad_lee Welcome back💞',
 	'maruoji' : 'Konnichiwa @Maruoji sannnnn! 🍪✨',
 	'lfabro13' : 'Oh shiii, it\'s Libby fabro! 🎸',
@@ -120,7 +120,7 @@ greetings =
 	'shinyoungjistefy' : 'Stefyyyyyy welcome back!❤️ did your phone fall on ur face again?', 
 	'metarki' : '@Metarki 💞 Velkommen tilbage! Are you wearing your dream dress today? 👗🍸',
 	'wanderlustlena' : 'Oii ya still here? Welcome 💞❤️',
-	'mrgaijin2020' : '🚨🚨🚑🚑 MrWeirdo2020 is back 🚑🚑🚨🚨'
+	'mrgaijintv' : '🚨🚨🚑🚑 MrWeirdoTV is back 🚑🚑🚨🚨'
 };
 
 exports.getGreeting = (user) =>
