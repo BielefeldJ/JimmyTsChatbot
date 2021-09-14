@@ -230,6 +230,11 @@ function onMessageHandler (target, user, msg, self) {
 			client.say(target,messages.stagewrong());
 			return;
 		}
+		else if (commandName === 'host')
+		{
+			client.say(target,messages.hostMsg());
+			return;
+		}
 	}
 
 	// User commands

@@ -86,6 +86,8 @@ exports.refreshMsg = () => `Welcome raiders! Please refresh the page or click th
 //Messages for the stage
 //stage wrong usage
 exports.stagewrong = () => `Send someone to a Stage. use !stage <1-9> <@user>`;
+//!host
+exports.hostMsg = () => ` Great you want to host the stream!! VirtualHug VirtualHug => To host from a computer type /host @jimmytaenaka in your twitch channels chat box (your channel) => On a phone, click the share symbol in the top right corner of your screen and click host.`;
 //==================================================================
 //Botowner commands
 //!heyhey 

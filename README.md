@@ -57,6 +57,7 @@ Command | Description | Usage
 `!prime` | gives the twitch gaming hint | `!prime`
 `!refresh` | welcome raiders. pls refresh | `!refresh`
 `!stage` | send someone on stage | `!stage <1-9> <@user>`
+`!host` | shows a how to host message in chat | `!host`
 
 How to run
 -------------
