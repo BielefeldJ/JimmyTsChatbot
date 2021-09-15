@@ -396,6 +396,11 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target,messages.raidcallMsg());
 		return;
 	}
+	else if(commandName === 'ratchet' || commandName === 'guitar')
+	{
+		client.say(target,messages.ratchetMsg());
+		return;
+	}
 	else if(commandName === 'help')
 	{
 		client.say(target, messages.helpMsg());
