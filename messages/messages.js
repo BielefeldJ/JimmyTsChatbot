@@ -58,7 +58,7 @@ exports.bonkMsg = (fromuser, touser) => `${fromuser} bonked ${touser} for being 
 //!raidcall
 exports.raidcallMsg = () => `TombRaid twitchRaid TombRaid twitchRaid You have been raided by the SHABOODA fam! TombRaid twitchRaid TombRaid twitchRaid`;
 //!ratchet
-exports.ratchetMsg = () => `Hey! You like guitar music? Check out @The_Monkey_Mann_ and his music here https://www.ratchet-music.com/ or on Spotify https://open.spotify.com/artist/5yH2eGfg4FZqu3Oeg21Mbw?`;
+exports.ratchetMsg = () => `Hey! You like guitar music? Check out @The_Monkey_Mann_ and his music here https://www.ratchet-music.com or on Spotify https://open.spotify.com/artist/5yH2eGfg4FZqu3Oeg21Mbw`;
 //!help
 exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !bonk, !refill, !lastsong, !favsong, !love, !heart, !hu, !wow, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !lurk, !unlurk, !tissue, !raidcall, !ratchet`;
 //==================================================================
