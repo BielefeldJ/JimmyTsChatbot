@@ -33,10 +33,24 @@ function getUserVIP(user)
 	return ("vip" in user["badges"]);
 }
 
+function checkUserName(username, callback)
+{
+	username = username.toLowerCase(); //Twitch display names are always the username. Usernames on Twitch are always lowercase
+	if (username.substr(0, 1) === '@') //the sender tagged the user, remove the "@" at the beginning of the username
+		username = username.slice(1);
+	
+	const check = /^[a-z0-9]*$/; //A twitch username can only be numbers and lowercase characters
+	if(check.test(username))
+		callback(username);
+	else
+		callback(false);
+}
+
 module.exports= {
 	getDisplayName,
 	getCumulativeMonth,
 	getRecipientDisplayName,
 	getSenderGiftCount,
-	getUserVIP
+	getUserVIP,
+	checkUserName
 };
