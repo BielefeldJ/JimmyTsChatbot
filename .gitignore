@@ -108,3 +108,7 @@ config.js
 
 #ignore test script
 test.js
+test2.js
+
+#ignore stored files
+messages/greetings.json
