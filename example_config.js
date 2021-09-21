@@ -13,7 +13,13 @@ const tmiconf = {
 const botowner = "Twitch username";
 
 //enable greetings. If true, the bot will greet new user who joins the chat
-const greetings = true;//true or false
+const GREETINGCONF = {
+	enable : true, //true or false
+	ignoreUser : [], //list of user to ignore (like bots)
+	filename : 'FILEMANE', //file name where the greetings will be saved
+	defaultmsg : 'Hey @{user}!! ♥ Welcome ^-^' //default greeting message {user} will be replaces with the username
+}
+
 
 //logging config
 const LOGGING = {};
@@ -24,4 +30,4 @@ LOGGING.errlogfile = ""; //error log file
 //API key for open weather map
 const OPENWEATHER_API_KEY = '';
 
-module.exports = {tmiconf,botowner,greetings,OPENWEATHER_API_KEY};
+module.exports = {tmiconf,LOGGING,botowner,OPENWEATHER_API_KEY,GREETINGCONF};

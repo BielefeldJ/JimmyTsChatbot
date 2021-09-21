@@ -9,6 +9,7 @@ const messages = require('./messages/messages.js')
 const textimages = require('./messages/textimages.js');
 const util = require('./utilities/userutil.js');
 const Weather = require('./utilities/weather.js');
+const Greeting = require('./utilities/greeting.js');
 
 //logging
 if(config.LOGGING.enable)
@@ -52,9 +53,6 @@ const counters ={
 	fsc : favsongcounter
 };
 
-//ignore list for greeting function
-var greeted = ['streamelements', 'streamlabs', 'jimmytaenaka'];
-
 //init stage
 var stages = ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'];
 
@@ -62,17 +60,19 @@ var stages = ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'em
 Weather.setAPIKEY(config.OPENWEATHER_API_KEY);
 Weather.client(client);
 
+//Init Greeting Module
+Greeting.init(config.GREETINGCONF);
+
 //start handler
 // Called every time a message comes in. Handler for all commands
 function onMessageHandler (target, user, msg, self) {
 	if (self) { return; } // Ignore messages from the bot
 
-	if (config.greetings && !greeted.includes(user.username))
+	if (config.GREETINGCONF.enable)
 	{
-		client.say(target,messages.getGreeting(user)).then((data) => {
-			greeted.push(user.username);
-		});
-		
+		Greeting.greetUser(user, message => {
+			client.say(target,message);
+		})
 	}
 	//If someone hits reply in the chat, the chat will automaticly add the targeted user as first word, starting with an @
 	//If this is the case, remove the first word to check if the user used a command while using the reply feature.
@@ -233,6 +233,67 @@ function onMessageHandler (target, user, msg, self) {
 		else if (commandName === 'host')
 		{
 			client.say(target,messages.hostMsg());
+			return;
+		}
+		else if(commandName === 'greeting' && hasParameter)
+		{
+			switch(parse[0])
+			{
+				case 'add':
+				case 'edit':
+					if(parse[1] && parse[2])
+					{
+						console.log(`User ${user.username} edited a greeting.`);
+						let username = parse[1];
+						let greeting = parse.slice(1).join(' ');
+						Greeting.addGreeting(username,greeting,msg => {
+							client.say(target,msg);
+						})						
+						return;
+					}	
+					else			
+						client.say(target,'Use !greeting edit @Username greeting-message');		
+					break;		
+				case 'get':
+					if(parse[1])
+					{
+						Greeting.getGreeting(parse[1], msg => {
+							client.say(target,msg);
+						});
+						return;
+					}	
+					else
+						client.say(target,'Use !greeting get @username');				
+					break;
+				case 'rename':
+					if(parse[1] && parse[2])
+					{
+						console.log(`User ${user.username} moved a greeting from ${parse[1]} to ${parse[2]}.`);
+						Greeting.rename(parse[1],parse[2], msg => {
+							client.say(target,msg);
+						});
+						return;
+					}
+					else
+						client.say(target,'Use !greeting rename @OldUsername @NewUsername');
+					break;
+				case 'remove':
+					if(parse[1])
+					{
+						Greeting.remove(parse[1], msg => {
+							client.say(target,msg);
+						})
+					}
+					else
+						client.say(target,'Use !greeting remove @Username');
+					break;
+				case 'reset':
+					Greeting.resetGreeted();
+					break;
+				default:
+					client.say(target,'Unknown option. Use !greeting get|edit|rename|remove');
+					break;
+			}
 			return;
 		}
 	}
@@ -463,9 +524,9 @@ schedule.scheduleJob('0 4 * * *', () => {
 	{
 		counters[c].resetCounter();
 	}
-	greeted = ['streamelements', 'streamlabs', 'jimmytaenaka']; //reset greetings
+	Greeting.resetGreeted(); //reset greetings
 	stages = ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty']; //reset stages
-	console.log('Triggered at 4 am. Reset all counter to 0');
+	console.log('INFO: Daily reset triggered. Reset all counter and greetings');
 });
 
 //cach Exception and write them to the logfile
