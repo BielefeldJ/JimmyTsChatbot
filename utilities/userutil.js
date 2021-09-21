@@ -39,7 +39,7 @@ function checkUserName(username, callback)
 	if (username.substr(0, 1) === '@') //the sender tagged the user, remove the "@" at the beginning of the username
 		username = username.slice(1);
 	
-	const check = /^[a-z0-9]*$/; //A twitch username can only be numbers and lowercase characters
+	const check = /^[a-z0-9_]*$/; //A twitch username can only be numbers and lowercase characters
 	if(check.test(username))
 		callback(username);
 	else
