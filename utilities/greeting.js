@@ -65,6 +65,22 @@ Greeting.greetUser = (user, callback) => {
 	}
 }
 
+//function to return a greeting from a user
+Greeting.getGreeting = (user,callback) => {
+	util.checkUserName(user, validuser => {
+		if(validuser)
+		{
+			var greeting = Greeting.messages[validuser];
+			if(greeting)
+				callback(greeting);
+			else
+				callback(`${user} does not have a personal greeting`);
+		}		
+		else
+			callback(`${user} is not a valid Twitch username.`);
+	});
+}
+
 //function to add a greeting for a user
 Greeting.addGreeting = (username, message, callback) => {
 	util.checkUserName(username, validusername => {

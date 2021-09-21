@@ -254,6 +254,17 @@ function onMessageHandler (target, user, msg, self) {
 					else			
 						client.say(target,'Use !greeting edit @Username greeting-message');		
 					break;		
+				case 'get':
+					if(parse[1])
+					{
+						Greeting.getGreeting(parse[1], msg => {
+							client.say(target,msg);
+						});
+						return;
+					}	
+					else
+						client.say(target,'Use !greeting get @username');				
+					break;
 				case 'rename':
 					if(parse[1] && parse[2])
 					{
@@ -280,7 +291,7 @@ function onMessageHandler (target, user, msg, self) {
 					Greeting.resetGreeted();
 					break;
 				default:
-					client.say(target,'Unknown option. Use !greeting edit|rename|remove');
+					client.say(target,'Unknown option. Use !greeting get|edit|rename|remove');
 					break;
 			}
 			return;
