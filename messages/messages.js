@@ -80,16 +80,16 @@ exports.awesomMsg = () => `All you awesome people,thank you so so much for hangi
 //!share command Message 
 exports.shareMsg = () => `All you awesome people please host,share,follow and subscribe!!`;
 //!sub suport the channel! Message
-exports.subMsg = () => `While subbing is always optional, it's a great way to support the stream ! https://www.twitch.tv/jimmytaenaka/subscribe`;
+exports.subMsg = () => `While subbing is always optional, it's a great way to support the stream ! https://www.twitch.tv/jimmytofficial/subscribe`;
 //!prime command Message
 exports.primeMsg = () => `If you have Amazon Prime, you automatically have Twitch Prime and can subscribe for FREE! Sign in with your Amazon account here: https://twitch.amazon.com/tp 🙏`;
 //!refresh
-exports.refreshMsg = () => `Welcome raiders! Please refresh the page or click the link https://www.twitch.tv/jimmytaenaka ❤️ Thank you so so much for being here with us!`;
+exports.refreshMsg = () => `Welcome raiders! Please refresh the page or click the link https://www.twitch.tv/jimmytofficial ❤️ Thank you so so much for being here with us!`;
 //Messages for the stage
 //stage wrong usage
 exports.stagewrong = () => `Send someone to a Stage. use !stage <1-9> <@user>`;
 //!host
-exports.hostMsg = () => ` Great you want to host the stream!! VirtualHug VirtualHug => To host from a computer type /host @jimmytaenaka in your twitch channels chat box (your channel) => On a phone, click the share symbol in the top right corner of your screen and click host.`;
+exports.hostMsg = () => ` Great you want to host the stream!! VirtualHug VirtualHug => To host from a computer type /host @jimmytofficial in your twitch channels chat box (your channel) => On a phone, click the share symbol in the top right corner of your screen and click host.`;
 //==================================================================
 //Botowner commands
 //!heyhey 
