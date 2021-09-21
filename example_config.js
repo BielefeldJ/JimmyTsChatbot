@@ -16,7 +16,8 @@ const botowner = "Twitch username";
 const GREETINGCONF = {
 	enable : true, //true or false
 	ignoreUser : [], //list of user to ignore (like bots)
-	filename : 'FILEMANE' //file name where the greetings will be saved
+	filename : 'FILEMANE', //file name where the greetings will be saved
+	defaultmsg : 'Hey @{user}!! ♥ Welcome ^-^' //default greeting message {user} will be replaces with the username
 }
 
 
