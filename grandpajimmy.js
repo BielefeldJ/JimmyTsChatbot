@@ -245,7 +245,7 @@ function onMessageHandler (target, user, msg, self) {
 					{
 						console.log(`User ${user.username} edited a greeting.`);
 						let username = parse[1];
-						let greeting = parse.slice(1).join(' ');
+						let greeting = parse.slice(2).join(' ');
 						Greeting.addGreeting(username,greeting,msg => {
 							client.say(target,msg);
 						})						
