@@ -63,9 +63,6 @@ exports.ratchetMsg = () => `Hey! You like guitar music? Check out @The_Monkey_Ma
 exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !tea, !bonk, !refill, !lastsong, !favsong, !love, !heart, !hu, !wow, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !lurk, !unlurk, !tissue, !raidcall, !ratchet`;
 //==================================================================
 //Mod and VIP commands
-//!so
-exports.shoutoutMsg = (soToUser) => `Big shoutout to '${soToUser}' please follow their channel! ✨✨ https://www.twitch.tv/${soToUser.substring(1)}`;
-exports.wrongUsageMsg = () => `Did Jimmy use this command again? Jeez Jimmy. Its '!so @username' You can only specify one thing.`;
 //!setcounter
 exports.setCounterMsg = (counter) => `Counter set to ${counter}.`;
 exports.counterNotFoundMsg = (countername) => `Counter with name ${countername} not found`;
