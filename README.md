@@ -41,10 +41,6 @@ Command | Cescription | Usage
 `!ratchet` | shows ratchet music channel in chat | `!ratchet`
 
 
-
-
-
-
 ### Mods ###
 Command | Description | Usage
 ----------------|--------------|-------
@@ -60,6 +56,19 @@ Command | Description | Usage
 `!refresh` | welcome raiders. pls refresh | `!refresh`
 `!stage` | send someone on stage | `!stage <1-9> <@user>`
 `!host` | shows a how to host message in chat | `!host`
+
+Greeting usage:
+-------------
+!greeting get @username
+!greeting edit @username greetingmessage
+!greeting remove @username
+!greeting rename @olduser @newuser
+
+Personalized so messages:
+-------------
+!so add @username somessage
+!so remove @username
+
 
 How to run
 -------------
