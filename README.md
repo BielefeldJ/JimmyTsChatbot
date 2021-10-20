@@ -59,15 +59,15 @@ Command | Description | Usage
 
 Greeting usage:
 -------------
-!greeting get @username
-!greeting edit @username greetingmessage
-!greeting remove @username
-!greeting rename @olduser @newuser
+* !greeting get @username
+* !greeting edit @username greetingmessage
+* !greeting remove @username
+* !greeting rename @olduser @newuser
 
 Personalized so messages:
 -------------
-!so add @username somessage
-!so remove @username
+* !so add @username somessage
+* !so remove @username
 
 
 How to run
