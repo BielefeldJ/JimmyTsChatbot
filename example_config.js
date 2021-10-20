@@ -20,6 +20,12 @@ const GREETINGCONF = {
 	defaultmsg : 'Hey @{user}!! ♥ Welcome ^-^' //default greeting message {user} will be replaces with the username
 }
 
+//config for personal SO messages
+const SHOUTOUTCONF = {
+	filename : 'FILEMANE', //file name where the so messages will be saved
+	defaultmsg : 'Big shoutout to @{user} please follow their channel! ✨✨ https://www.twitch.tv/{user}' //default so message {user} will be replaces with the username
+}
+
 
 //logging config
 const LOGGING = {};
@@ -30,4 +36,4 @@ LOGGING.errlogfile = ""; //error log file
 //API key for open weather map
 const OPENWEATHER_API_KEY = '';
 
-module.exports = {tmiconf,LOGGING,botowner,OPENWEATHER_API_KEY,GREETINGCONF};
+module.exports = {tmiconf,LOGGING,botowner,OPENWEATHER_API_KEY,GREETINGCONF,SHOUTOUTCONF};
