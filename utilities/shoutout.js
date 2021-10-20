@@ -53,23 +53,25 @@ Shoutout.init = (soconfig) => {
 
 //gives back the default or personal so message
 Shoutout.shoutoutUser = (username,callback) => {
-	if(Shoutout.messages.hasOwnProperty(username))	
-	{
-		callback(Shoutout.messages[username]);
-	}
-	else
-	{
-		callback(Shoutout.config.defaultmsg.replace(/{user}/g,util.getDisplayName(user)));
-	}
+	util.checkUserName(username, validusername =>{
+		if(Shoutout.messages.hasOwnProperty(validusername))	
+		{
+			callback(Shoutout.messages[validusername]);
+		}
+		else
+		{	//validusername is already in lowercase and without the @. So we can just add it to the link
+			callback(Shoutout.config.defaultmsg.replace(/{user}/g,username).replace(/{userlink}/g,validusername)); 
+		}
+	});
 }
 
-Shoutout.addshoutout = (username, shoutoutmsg, callback) => {
+Shoutout.add = (username, shoutoutmsg, callback) => {
 	util.checkUserName(username, validusername => {
 		if(validusername)
 		{
 			if(shoutoutmsg)
 			{
-				Shoutout.shoutoutmsg[validusername] = shoutoutmsg;
+				Shoutout.messages[validusername] = shoutoutmsg;
 				Shoutout.writeToFileAsync();
 				console.log(`INFO SHOUTOUT: added persinal SO message fpr user ${username}`);
 				callback(`Successfully edited !so for ${username}`);
@@ -88,7 +90,8 @@ Shoutout.remove = (user, callback) => {
 	util.checkUserName(user, validusername =>{
 		if(validusername)
 		{
-			delete Shoutout.shoutoutmsg[validusername];
+			delete Shoutout.messages[validusername];
+			Shoutout.writeToFileAsync();
 			callback(`Removed personal so msg for user ${user}`);			
 		}
 		else

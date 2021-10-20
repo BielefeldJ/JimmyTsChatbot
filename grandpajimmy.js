@@ -10,6 +10,7 @@ const textimages = require('./messages/textimages.js');
 const util = require('./utilities/userutil.js');
 const Weather = require('./utilities/weather.js');
 const Greeting = require('./utilities/greeting.js');
+const Shoutout = require('./utilities/shoutout.js');
 
 //logging
 if(config.LOGGING.enable)
@@ -62,6 +63,9 @@ Weather.client(client);
 
 //Init Greeting Module
 Greeting.init(config.GREETINGCONF);
+
+//Init Shoutout Module
+Shoutout.init(config.SHOUTOUTCONF);
 
 //start handler
 // Called every time a message comes in. Handler for all commands
@@ -135,8 +139,39 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		if(commandName === 'so' && hasParameter) //shoutout someone
 		{
-			client.say(target,messages.shoutoutMsg(parse[0]));		
-			return;		
+			//client.say(target,messages.shoutoutMsg(parse[0]));		
+			//return;
+			switch(parse[0])
+			{
+				case 'add':
+					if(parse[1] && parse[2])
+					{
+						console.log(`User ${user.username} edited a shoutout msg.`);
+						let username = parse[1];
+						let somsg = parse.slice(2).join(' ');
+						Shoutout.add(username,somsg,msg => {
+							client.say(target,msg);
+						})						
+						return;
+					}	
+					else			
+						client.say(target,'Use !so add @Username greeting-message');		
+					break;		
+				case 'remove':
+					if(parse[1])
+					{
+						Shoutout.remove(parse[1], msg => {
+							client.say(target,msg);
+						})
+					}
+					else
+						client.say(target,'Use !so remove @Username');
+					break;
+				default:
+					Shoutout.shoutoutUser(parse[0], msg => {
+						client.say(target,msg);
+					});
+			}
 		}
 		//DEFAULT set the wrong button counter to a value given as parameter
 		//If a specific counter is fiven, sets it a value (first parameter is the counter name in countersarray seccond the new value)
