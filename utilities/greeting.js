@@ -91,10 +91,10 @@ Greeting.addGreeting = (username, message, callback) => {
 				Greeting.messages[validusername] = message;
 				Greeting.writeToFileAsync();
 				console.log(`INFO GREETING: Edited greeting for user ${username}`);
-				callback(`Successfully Edited greeting for ${username}`);
+				callback(`Successfully edited greeting for ${username}`);
 				return;
 			}//no else needed because of return in if				
-			callback('Failed to edit greeting. Message cant be empty. Use "!greeting @username greetingmessage"');
+			callback('Failed to edit greeting. Message cant be empty. Use add "!greeting @username greetingmessage"');
 			return;
 		}
 		callback(`Failed to edit greeting. "${username}" is not a twitch username`);
