@@ -94,7 +94,7 @@ Greeting.addGreeting = (username, message, callback) => {
 				callback(`Successfully edited greeting for ${username}`);
 				return;
 			}//no else needed because of return in if				
-			callback('Failed to edit greeting. Message cant be empty. Use add "!greeting @username greetingmessage"');
+			callback('Failed to edit greeting. Message cant be empty. Use "!greeting add @username greetingmessage"');
 			return;
 		}
 		callback(`Failed to edit greeting. "${username}" is not a twitch username`);
