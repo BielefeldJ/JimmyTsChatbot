@@ -26,6 +26,8 @@ exports.communityGiftsubMessage = (displayname,numbOfSubs,totalgiftsubs) => `@${
 exports.counterMsg = (counter) => `Jimmy pressed the wrong button ${counter}x today!`;
 //!counter++
 exports.incCounterMsg = (counter) => `Wrong button counter is increased: ${counter}x today. Wow Jimmy.`;
+//!highschool
+exports.highschoolMsg = (counter) => `This reminds me of highschool! ${counter} times already.`;
 //!beer
 exports.beerToUserMsg = (fromuser,touser) => `${fromuser} gives a cold Beer to ${touser}! Cheers`;
 exports.beerMsg = (displayname) => `Hey ${displayname}, here. Have a nice Kirinbeer!`;

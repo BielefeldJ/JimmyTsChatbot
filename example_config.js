@@ -26,7 +26,6 @@ const SHOUTOUTCONF = {
 	defaultmsg : 'Big shoutout to @{user} please follow their channel! ✨✨ https://www.twitch.tv/{user}' //default so message {user} will be replaces with the username
 }
 
-
 //logging config
 const LOGGING = {};
 LOGGING.enable = true; //true = logging to file; false = logging on console

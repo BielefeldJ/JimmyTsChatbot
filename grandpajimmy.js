@@ -48,10 +48,12 @@ client.connect();
 const wrongbuttoncounter = new Counter();
 const lastsongcounter = new Counter();
 const favsongcounter = new Counter();
+const highschoolcounter = new Counter();
 const counters ={
 	wbc : wrongbuttoncounter,
 	lsc : lastsongcounter,
-	fsc : favsongcounter
+	fsc : favsongcounter,
+	hsc: highschoolcounter
 };
 
 //init stage
@@ -404,6 +406,12 @@ function onMessageHandler (target, user, msg, self) {
 	{
 		lastsongcounter.incCounter();
 		client.say(target,`${randomanswers.getRandomLastSongCall()}, ${lastsongcounter.getCounter}x now. `);
+		return;
+	}
+	else if(commandName === 'highschool')
+	{
+		highschoolcounter.incCounter();
+		client.say(target,messages.highschoolMsg(highschoolcounter.getCounter));
 		return;
 	}
 	else if(commandName === 'love')
