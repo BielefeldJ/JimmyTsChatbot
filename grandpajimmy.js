@@ -518,6 +518,11 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target,messages.ratchetMsg());
 		return;
 	}
+	else if(commandName === 'flip')
+	{
+		client.say(target,messages.flipMsg());
+		return;
+	}
 	else if(commandName === 'help')
 	{
 		client.say(target, messages.helpMsg());
