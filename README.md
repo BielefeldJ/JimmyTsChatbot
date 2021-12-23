@@ -22,6 +22,7 @@ Command | Cescription | Usage
 `!quote` | shows one of many famous quotes from Jimmy | `!quote` , `!quote 1`
 `!lastsong` | Yes this really is the last song! | `!lastsong`
 `!favsong` | Did you know? this is Jimmys favorite song | `!favsong`
+`!highschool` | This reminds Jimmy of highschool | `!highschool`
 `!love` | shows a lot of love in chat | `!love`
 `!heart` | shows a heart in chat | `!heart`
 `!wow` | shows a wow face | `!wow`
@@ -33,9 +34,11 @@ Command | Cescription | Usage
 `!boogie` | dance smiley in chat | `!boogie`
 `!netflix` | Shows Jimmys next Netflix show | `!netflix`
 `!rap` | It's raptime!! | `!rap`
+`!ra` | Rararaaa Ra Ra | `!ra`
 `!lurk` | entering lurk mode | `!lurk`
 `!unlurk` | exiting lurk mode | `!unlurk`
 `!bonk` | bonk someone for being mean | `!bonk`, `!bonk @UserName`
+`!hug` | give someone a hug | `!hug @username`
 `!weather` | shows the current weather at the given location | `!weather Berlin`
 `!raidcall` | shows the raidcall in chat | `!raidcall`
 `!ratchet` | shows ratchet music channel in chat | `!ratchet`
