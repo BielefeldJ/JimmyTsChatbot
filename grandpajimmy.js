@@ -568,13 +568,14 @@ function onRandomSubgiftHandler(target, username, numbOfSubs, methods, user)
 
 //runns every day at 4:00 in the morning to reset all counter for the next stream
 schedule.scheduleJob('0 4 * * *', () => { 
-	for(c in counters)
-	{
-		counters[c].resetCounter();
-	}
+
+	//reset some counter
+	wrongbuttoncounter.resetCounter();
+	lastsongcounter.resetCounter();
+
 	Greeting.resetGreeted(); //reset greetings
 	stages = ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty']; //reset stages
-	console.log('INFO: Daily reset triggered. Reset all counter and greetings');
+	console.log('INFO: Daily reset triggered. Reset counter and greetings');
 });
 
 //cach Exception and write them to the logfile
