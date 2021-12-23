@@ -81,9 +81,9 @@ function onMessageHandler (target, user, msg, self) {
 	//If someone hits reply in the chat, the chat will automaticly add the targeted user as first word, starting with an @
 	//If this is the case, remove the first word to check if the user used a command while using the reply feature.
 	if(msg.substr(0,1) === '@')
-    {
-        msg = msg.substr(msg.indexOf(" ") + 1);
-    }
+	{
+		msg = msg.substr(msg.indexOf(" ") + 1);
+	}
 	// This isn't a command since it has no prefix:
 	if (msg.substr(0, 1) !== commandPrefix) {
 		return;
@@ -113,9 +113,11 @@ function onMessageHandler (target, user, msg, self) {
 	//commands only the Botowner can execute
 	if(isBotOwner)
 	{
-		if(commandName === 'heyhey') //ping command to check if the bot is sill running 
+		if(commandName === 'hey') //ping command to check if the bot is sill running 
 		{
-			client.say(target,messages.ping());	
+			var time = process.uptime();
+			var uptime = (time + "").toHHMMSS();
+			client.say(target,`Hey, I am still here. Running since ${uptime}!`);
 			return;		
 		}
 		else if (commandName === 'resetall') //resetz all counter to 0
@@ -138,10 +140,8 @@ function onMessageHandler (target, user, msg, self) {
 	if(isModUp || isVIP)
 	{
 		if(commandName === 'so' && hasParameter) //shoutout someone
-		{
-			//client.say(target,messages.shoutoutMsg(parse[0]));		
-			//return;
-			switch(parse[0])
+		{		
+			switch(parse[0]) //option
 			{
 				case 'add':
 					if(parse[1] && parse[2])
@@ -568,3 +568,18 @@ schedule.scheduleJob('0 4 * * *', () => {
 proc.on('uncaughtException', function(err) {
 	console.error((err && err.stack) ? err.stack : err);
   });
+
+String.prototype.toHHMMSS = function () {
+	var sec_num = parseInt(this, 10);
+	var days 	= Math.floor(sec_num / 86400);
+	var hours   = Math.floor((sec_num - (days * 86400)) / 3600);
+	var minutes = Math.floor((sec_num - (days * 86400) - (hours * 3600)) / 60);
+	var seconds = sec_num - (days * 86400) - (hours * 3600) - (minutes * 60);
+
+	if (days 	< 10) {days		= "0"+days;}
+	if (hours   < 10) {hours	= "0"+hours;}
+	if (minutes < 10) {minutes	= "0"+minutes;}
+	if (seconds < 10) {seconds	= "0"+seconds;}
+	var time	= days + ' days, ' + hours + ' hours, ' + minutes + ' minutes and ' + seconds + ' seconds';
+	return time;
+}

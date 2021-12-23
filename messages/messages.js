@@ -89,8 +89,6 @@ exports.stagewrong = () => `Send someone to a Stage. use !stage <1-9> <@user>`;
 exports.hostMsg = () => ` Great you want to host the stream!! VirtualHug VirtualHug => To host from a computer type /host @jimmytofficial in your twitch channels chat box (your channel) => On a phone, click the share symbol in the top right corner of your screen and click host.`;
 //==================================================================
 //Botowner commands
-//!heyhey 
-exports.ping = () => `Yeeyyy Prof is here!! <3 I am still up and running :3`;
 //!resetall
 exports.resetAllMsg = () => `All counter are not 0`;
 //!shutdown
