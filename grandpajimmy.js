@@ -460,6 +460,11 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target,messages.timesMsg());
 		return;
 	}
+	else if(commandName === 'ra')
+	{
+		client.say(target,messages.rararaMsg());
+		return;
+	}
 	else if(commandName === 'boogie')
 	{
 		client.say(target,messages.boogieMsg());

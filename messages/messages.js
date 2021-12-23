@@ -57,6 +57,8 @@ exports.lurkMsg = (displayname) => `@${displayname} enters lurk mode. Thank you 
 exports.unlurkMsg = (displayname) => `@${displayname} is back from lurking! Happy chatting 💞`;
 //!bonk
 exports.bonkMsg = (fromuser, touser) => `${fromuser} bonked ${touser} for being mean! Why are you so mean?!?`;
+//!ra
+exports.rararaMsg = () => `RRRAA RRRRAA RRRRRRRAAAAAAAA RRRAA RRRRAA RRRRRRRAAAAAAAA`;
 //!raidcall
 exports.raidcallMsg = () => `TombRaid twitchRaid TombRaid twitchRaid You have been raided by the SHABOODA fam! TombRaid twitchRaid TombRaid twitchRaid`;
 //!ratchet
