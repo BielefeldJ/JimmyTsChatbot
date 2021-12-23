@@ -452,6 +452,21 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target,textimages.cat);
 		return;
 	}
+	else if(commandName === 'bongo' || commandName === 'bongocat')
+	{
+		client.say(target,textimages.bongocat);
+		return;
+	}
+	else if(commandName === 'o.o' || commandName === 'o.O')
+	{
+		client.say(target,textimages.look);
+		return;
+	}
+	else if(commandName === 'whink')
+	{
+		client.say(target,textimages.whink);
+		return;
+	}
 	else if (commandName === 'favsong')
 	{
 		favsongcounter.incCounter();

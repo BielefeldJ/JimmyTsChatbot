@@ -27,6 +27,10 @@ Command | Cescription | Usage
 `!heart` | shows a heart in chat | `!heart`
 `!wow` | shows a wow face | `!wow`
 `!hu` | Hands up! | `!hu`
+`!cat` | cat | `!cat`
+`!bongo` | bongo cat! | `!bongo`
+`!whink` | whink face! | `!whink`
+`!o.o` | cute face | `!o.o`, `!o.O`
 `!dance` | dancing people in chat \o/ | `!dance`
 `!discord` | shows discord invite link | `!discord`
 `!socials` | shows all social links | `!socials`
@@ -35,6 +39,7 @@ Command | Cescription | Usage
 `!netflix` | Shows Jimmys next Netflix show | `!netflix`
 `!rap` | It's raptime!! | `!rap`
 `!ra` | Rararaaa Ra Ra | `!ra`
+`!flip` | flip the damn table | `!flip`
 `!lurk` | entering lurk mode | `!lurk`
 `!unlurk` | exiting lurk mode | `!unlurk`
 `!bonk` | bonk someone for being mean | `!bonk`, `!bonk @UserName`

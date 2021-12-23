@@ -68,7 +68,7 @@ exports.raidcallMsg = () => `TombRaid twitchRaid TombRaid twitchRaid You have be
 //!ratchet
 exports.ratchetMsg = () => `Hey! You like guitar music? Check out @The_Monkey_Mann_ and his music here https://www.ratchet-music.com or on Spotify https://open.spotify.com/artist/5yH2eGfg4FZqu3Oeg21Mbw`;
 //!help
-exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !hug, !ra, !flip, !highschool, !tea, !bonk, !refill, !lastsong, !favsong, !love, !heart, !cat, !hu, !wow, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !lurk, !unlurk, !tissue, !raidcall, !ratchet`;
+exports.helpMsg = () => `Available commands: !counter, !quote, !help, !beer, !hug, !ra, !flip, !highschool, !tea, !bonk, !refill, !lastsong, !favsong, !love, !heart, !cat, !whink, !bongo, !o.o, !hu, !wow, !rap, !dance, !netflix, !socials, !discord, !times, !boogie, !lurk, !unlurk, !tissue, !raidcall, !ratchet`;
 //==================================================================
 //Mod and VIP commands
 //!setcounter
