@@ -467,6 +467,11 @@ function onMessageHandler (target, user, msg, self) {
 		client.say(target,textimages.whink);
 		return;
 	}
+	else if(commandName === 'stfu')
+	{
+		client.say(target,textimages.stfu);
+		return;
+	}
 	else if (commandName === 'favsong')
 	{
 		favsongcounter.incCounter();
