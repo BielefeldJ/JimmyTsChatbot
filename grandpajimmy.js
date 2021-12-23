@@ -384,6 +384,14 @@ function onMessageHandler (target, user, msg, self) {
 			return;
 		}
 	}
+	else if(commandName === 'hug')
+	{
+		if(hasParameter)
+		{
+			client.say(target,messages.hugMsg(util.getDisplayName(user),parse[0]));
+			return;
+		}
+	}
 	else if(commandName === 'tissue')
 	{
 		if(hasParameter)

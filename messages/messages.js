@@ -31,6 +31,8 @@ exports.highschoolMsg = (counter) => `This reminds me of highschool! ${counter} 
 //!beer
 exports.beerToUserMsg = (fromuser,touser) => `${fromuser} gives a cold Beer to ${touser}! Cheers`;
 exports.beerMsg = (displayname) => `Hey ${displayname}, here. Have a nice Kirinbeer!`;
+//!hug
+exports.hugMsg = (fromuser,touser) => `${fromuser} gives ${touser} the biggest hug world has ever seen ❤️ So glad to see you!`;
 //!tea
 exports.teaToUserMsg = (fromuser, touser) => `@${fromuser} pours ${touser} a nice cup of jasmine tea.`;
 exports.teaMsg = (displayname) => `@${displayname} here, have a nice cup of jasmine tea.`;
