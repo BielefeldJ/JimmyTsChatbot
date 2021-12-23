@@ -50,7 +50,7 @@ exports.timesMsg = () => `Jimmy usually streams on Sunday, Tuesday and Thursday 
 //!boogie
 exports.boogieMsg = () => `♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o･)┛♪┗ ( ･o･) ┓♪♪┏(・o･)┛♪`;
 //!netflix
-exports.netflixMsg = () => `Check out Glória on Netflix! https://www.netflix.com/title/81073977 Coming Q4 2021`;
+exports.netflixMsg = () => `Check out Glória on Netflix! https://www.netflix.com/title/81073977`;
 //!rap
 exports.rapMsg = () => `Yoyoyoyoyo It's Raptime baby!!`;
 //!lurk
