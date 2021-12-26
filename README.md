@@ -32,6 +32,7 @@ Command | Cescription | Usage
 `!whink` | whink face! | `!whink`
 `!o.o` | cute face | `!o.o`, `!o.O`
 `!stfu` | stfu sign | `!stfu`
+`!cheers` | cheers with 2 beer | `!cheers`
 `!dance` | dancing people in chat \o/ | `!dance`
 `!discord` | shows discord invite link | `!discord`
 `!socials` | shows all social links | `!socials`
