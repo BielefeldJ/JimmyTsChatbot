@@ -11,6 +11,7 @@ const util = require('./utilities/userutil.js');
 const Weather = require('./utilities/weather.js');
 const Greeting = require('./utilities/greeting.js');
 const Shoutout = require('./utilities/shoutout.js');
+const HealthcheckClient = require('ipc-healthcheck/healthcheck-client');
 
 //logging
 if(config.LOGGING.enable)
@@ -43,6 +44,11 @@ client.on('submysterygift', onRandomSubgiftHandler);
 
 // Connect to Twitch:
 client.connect();
+
+//health check stuff
+const healthcheck = new HealthcheckClient('twitchbots','GrandpaJimmyT',true);
+//start listening for healthcheck 
+healthcheck.startListening();
 
 //init counter
 const wrongbuttoncounter = new Counter();
