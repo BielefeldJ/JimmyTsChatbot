@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  grandpajimmyt:
+    #build: .
+    image: bielefeldj/jimmytschatbot
+    container_name: grandpajimmyt
+    volumes:
+      -  ./messages:/bot/messages
+      -  ./config.js:/bot/config.js

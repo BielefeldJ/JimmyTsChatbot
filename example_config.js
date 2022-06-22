@@ -26,13 +26,8 @@ const SHOUTOUTCONF = {
 	defaultmsg : 'Big shoutout to @{user} please follow their channel! ✨✨ https://www.twitch.tv/{user}' //default so message {user} will be replaces with the username
 }
 
-//logging config
-const LOGGING = {};
-LOGGING.enable = true; //true = logging to file; false = logging on console
-LOGGING.logfile = ""; //log file
-LOGGING.errlogfile = ""; //error log file
 
 //API key for open weather map
 const OPENWEATHER_API_KEY = '';
 
-module.exports = {tmiconf,LOGGING,botowner,OPENWEATHER_API_KEY,GREETINGCONF,SHOUTOUTCONF};
+module.exports = {tmiconf,botowner,OPENWEATHER_API_KEY,GREETINGCONF,SHOUTOUTCONF};

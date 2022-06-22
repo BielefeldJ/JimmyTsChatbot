@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "node-schedule": "^2.1.0",
+    "tmi.js": "^1.8.5"
+  },
+  "name": "jimmytschatbot",
+  "description": "This is the Twitch Chatbot for [Jimmy Taenakas channel](https://www.twitch.tv/jimmytaenaka)",
+  "version": "1.0.0",
+  "main": "grandpajimmy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BielefeldJ/JimmyTsChatbot.git"
+  },
+  "author": "BielefeldJ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BielefeldJ/JimmyTsChatbot/issues"
+  },
+  "homepage": "https://github.com/BielefeldJ/JimmyTsChatbot#readme"
+}
