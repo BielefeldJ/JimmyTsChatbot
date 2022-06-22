@@ -11,18 +11,6 @@ const util = require('./utilities/userutil.js');
 const Weather = require('./utilities/weather.js');
 const Greeting = require('./utilities/greeting.js');
 const Shoutout = require('./utilities/shoutout.js');
-const HealthcheckClient = require('ipc-healthcheck/healthcheck-client');
-
-//logging
-if(config.LOGGING.enable)
-{
-	//use logfiles
-	var access = fs.createWriteStream(config.LOGGING.logfile);
-	var error = fs.createWriteStream(config.LOGGING.errlogfile);
-	// redirect stdout / stderr
-	proc.stdout.write = access.write.bind(access);
-	proc.stderr.write = error.write.bind(error); 
-}
 
 // Valid commands start with !
 const commandPrefix = '!';
@@ -45,10 +33,6 @@ client.on('submysterygift', onRandomSubgiftHandler);
 // Connect to Twitch:
 client.connect();
 
-//health check stuff
-const healthcheck = new HealthcheckClient('twitchbots','GrandpaJimmyT',true);
-//start listening for healthcheck 
-healthcheck.startListening();
 
 //init counter
 const wrongbuttoncounter = new Counter();
